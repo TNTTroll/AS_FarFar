@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Puzzles.FirstLights">
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.example.far_faraway.Object
+        android:id="@+id/firstLightsBack"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="646dp"
+        android:layout_marginTop="323dp"
+        android:background="@drawable/back"
+        android:contentDescription="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/firstLightsLamp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/lamp1" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstLights1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="467dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/button"
+        android:contentDescription="@string/app_name" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstLights2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="469dp"
+        android:layout_marginTop="186dp"
+        android:background="@drawable/button"
+        android:contentDescription="@string/app_name" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstLights3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="467dp"
+        android:layout_marginTop="283dp"
+        android:background="@drawable/button"
+        android:contentDescription="@string/app_name" />
+
+</RelativeLayout>
