@@ -59,45 +59,55 @@ public class FirstLights extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
 
-        switch (v.getId()) {
-            case (R.id.firstLightsBack):
-                getParentFragmentManager().beginTransaction().replace(R.id.roomView, new RoomOne()).addToBackStack(null).commit();
-                break;
-            case (R.id.firstLights1):
-                if (sequence[round] == 1)
-                    round += 1;
-                else
-                    round = 0;
+        if (v.getId() == R.id.firstLightsBack)
+            getParentFragmentManager().beginTransaction().replace(R.id.roomView, new RoomOne()).addToBackStack(null).commit();
 
-                btn1.setIcon("lamp_button_on");
-                handler.postDelayed(() -> { btn1.setIcon("none"); }, btnClickTime);
+        if (MainActivity.firstElectricity) {
+            switch (v.getId()) {
+                case (R.id.firstLights1):
+                    if (sequence[round] == 1)
+                        round += 1;
+                    else
+                        round = 0;
 
-                break;
-            case (R.id.firstLights2):
-                if (sequence[round] == 2)
-                    round += 1;
-                else
-                    round = 0;
+                    btn1.setIcon("lamp_button_on");
+                    handler.postDelayed(() -> {
+                        btn1.setIcon("none");
+                    }, btnClickTime);
 
-                btn2.setIcon("lamp_button_on");
-                handler.postDelayed(() -> { btn2.setIcon("none"); }, btnClickTime);
+                    break;
 
-                break;
-            case (R.id.firstLights3):
-                if (sequence[round] == 3)
-                    round += 1;
-                else
-                    round = 0;
+                case (R.id.firstLights2):
+                    if (sequence[round] == 2)
+                        round += 1;
+                    else
+                        round = 0;
 
-                btn3.setIcon("lamp_button_on");
-                handler.postDelayed(() -> { btn3.setIcon("none"); }, btnClickTime);
+                    btn2.setIcon("lamp_button_on");
+                    handler.postDelayed(() -> {
+                        btn2.setIcon("none");
+                    }, btnClickTime);
 
-                break;
+                    break;
+
+                case (R.id.firstLights3):
+                    if (sequence[round] == 3)
+                        round += 1;
+                    else
+                        round = 0;
+
+                    btn3.setIcon("lamp_button_on");
+                    handler.postDelayed(() -> {
+                        btn3.setIcon("none");
+                    }, btnClickTime);
+
+                    break;
+            }
+
+            setButtons(false);
+
+            checkLamps();
         }
-
-        setButtons(false);
-
-        checkLamps();
     }
 
     @Override

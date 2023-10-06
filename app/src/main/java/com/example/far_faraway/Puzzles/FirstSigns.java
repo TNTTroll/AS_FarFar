@@ -82,29 +82,23 @@ public class FirstSigns extends Fragment implements View.OnClickListener {
 
         }
 
-        for (int index = 1; index <= signsCount; index++) {
-            int resID = getResId("firstSigns_" + index, R.id.class);
+        if (MainActivity.firstElectricity)
+            for (int index = 1; index <= signsCount; index++) {
+                int resID = getResId("firstSigns_" + index, R.id.class);
 
-            if (resID == v.getId()) {
-                Object sign = (Object) view.findViewById(resID);
+                if (resID == v.getId()) {
+                    Object sign = (Object) view.findViewById(resID);
 
-                if (signsTurn[index - 1])
-                    sign.setIcon("symbol_" + signsImage[index - 1] + "_1");
-                else
-                    sign.setIcon("symbol_" + signsImage[index - 1] + "_2");
+                    if (signsTurn[index - 1])
+                        sign.setIcon("symbol_" + signsImage[index - 1] + "_1");
+                    else
+                        sign.setIcon("symbol_" + signsImage[index - 1] + "_2");
 
-                signsTurn[index - 1] = !signsTurn[index - 1];
+                    signsTurn[index - 1] = !signsTurn[index - 1];
 
-                break;
+                    break;
+                }
             }
-        }
-
-        if (checkSigns()) {
-
-            // TODO: Win conclusion
-
-            Log.d("SIGNS", "DONE");
-        }
 
     }
 
@@ -135,15 +129,6 @@ public class FirstSigns extends Fragment implements View.OnClickListener {
         }
 
         return view;
-    }
-
-    private boolean checkSigns() {
-        for (int x = 0; x < signsTurn.length; x++) {
-            if (signsTurn[x] != signsTurnCorrect[x])
-                return false;
-        }
-
-        return true;
     }
 
     private void setPosition(Object obj) {
