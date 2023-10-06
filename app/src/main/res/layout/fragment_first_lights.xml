@@ -1,64 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Puzzles.FirstLights">
 
-    <!-- TODO: Update blank fragment layout -->
-    <com.example.far_faraway.Object
-        android:id="@+id/firstLightsBack"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+    <ImageButton
+        android:id="@+id/firstLightsBG"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="646dp"
-        android:layout_marginTop="323dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:background="@drawable/bg_first_lamp"
+        android:scaleType="matrix"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstLightsBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:background="@drawable/back"
-        android:contentDescription="@string/app_name" />
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/firstLightsLamp"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="171dp"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="28dp"
-        android:src="@drawable/lamp1" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/lamp_off"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/firstLightsButtons"
+        android:layout_width="112dp"
+        android:layout_height="303dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/lamp_buttons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.676"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/firstLightsBG"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.example.far_faraway.Object
         android:id="@+id/firstLights1"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="105dp"
+        android:layout_height="133dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="467dp"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/button"
-        android:contentDescription="@string/app_name" />
+        android:layout_marginStart="3dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/firstLightsButtons"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.225" />
 
     <com.example.far_faraway.Object
         android:id="@+id/firstLights2"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="105dp"
+        android:layout_height="133dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="469dp"
-        android:layout_marginTop="186dp"
-        android:background="@drawable/button"
-        android:contentDescription="@string/app_name" />
+        android:layout_marginStart="3dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/firstLightsButtons"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.example.far_faraway.Object
         android:id="@+id/firstLights3"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="105dp"
+        android:layout_height="133dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="467dp"
-        android:layout_marginTop="283dp"
-        android:background="@drawable/button"
-        android:contentDescription="@string/app_name" />
+        android:layout_marginStart="3dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/firstLightsButtons"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.775" />
 
-</RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

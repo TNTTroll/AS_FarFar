@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.far_faraway.Puzzles.FirstCloset;
 import com.example.far_faraway.Puzzles.FirstLights;
 import com.example.far_faraway.Puzzles.FirstPipes;
 import com.example.far_faraway.Puzzles.FirstSigns;
@@ -97,7 +98,7 @@ public class RoomOne extends Fragment implements View.OnClickListener {
                                 break;
 
                             case "firstReader":
-                                if (MainActivity.firstElectricity) {
+                                if (MainActivity.firstLamps) {
                                     inventory[current_Item] = null;
                                     current_Item = -1;
 
@@ -153,6 +154,10 @@ public class RoomOne extends Fragment implements View.OnClickListener {
 
                     case "FirstSigns":
                         getParentFragmentManager().beginTransaction().replace(R.id.roomView, new FirstSigns()).addToBackStack(null).commit();
+                        break;
+
+                    case "FirstCloset":
+                        getParentFragmentManager().beginTransaction().replace(R.id.roomView, new FirstCloset()).addToBackStack(null).commit();
                         break;
                 }
 

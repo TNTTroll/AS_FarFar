@@ -4,6 +4,7 @@ import static com.example.far_faraway.Scene.getResId;
 import static com.example.far_faraway.Scene.inventory;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 
@@ -27,8 +28,13 @@ public class Object extends androidx.appcompat.widget.AppCompatButton {
 
     public void setParam(String _name, String _icon) {
         name = _name;
-        icon = ResourcesCompat.getDrawable(getResources(), getResId(_icon, R.drawable.class), null);
-        this.setBackground(icon);
+
+        if (_icon.equals("none"))
+            this.setBackgroundColor(Color.TRANSPARENT);
+        else {
+            icon = ResourcesCompat.getDrawable(getResources(), getResId(_icon, R.drawable.class), null);
+            this.setBackground(icon);
+        }
     }
 
     public boolean setToInventory() {
@@ -43,8 +49,12 @@ public class Object extends androidx.appcompat.widget.AppCompatButton {
     }
 
     public void setIcon(String _newIcon) {
-        icon = ResourcesCompat.getDrawable(getResources(), getResId(_newIcon, R.drawable.class), null);
-        this.setBackground( icon );
+        if (_newIcon.equals("none"))
+            this.setBackgroundColor(Color.TRANSPARENT);
+        else {
+            icon = ResourcesCompat.getDrawable(getResources(), getResId(_newIcon, R.drawable.class), null);
+            this.setBackground(icon);
+        }
     }
 
     public String getName() {

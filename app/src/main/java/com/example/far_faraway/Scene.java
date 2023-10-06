@@ -24,10 +24,10 @@ public class Scene extends AppCompatActivity implements View.OnClickListener {
     private View roomView;
 
     @SuppressLint("StaticFieldLeak")
-    private static ImageButton[] btn_invs = new ImageButton[5];
+    private static ImageButton[] btn_invs = new ImageButton[4];
     public static int current_Item = -1;
 
-    public static Object[] inventory = new Object[5];
+    public static Object[] inventory = new Object[4];
 
     public static void reloadInventory() {
         for (int x = 0; x < btn_invs.length; x++) {

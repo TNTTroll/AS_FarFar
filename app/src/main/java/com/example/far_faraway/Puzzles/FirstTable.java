@@ -31,7 +31,7 @@ public class FirstTable extends Fragment implements View.OnClickListener {
     View view;
 
     int height = _PUZZLES.firstTableHeight;
-    Object[] flasks = new Object[4];
+    Object[] flasks = new Object[3];
     Object active_flask;
 
     int[] needMix = _PUZZLES.firstTableSequence;

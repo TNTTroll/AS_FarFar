@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.far_faraway.MainActivity;
 import com.example.far_faraway.Object;
 import com.example.far_faraway.R;
 import com.example.far_faraway.RoomOne;
@@ -31,8 +32,8 @@ public class FirstLights extends Fragment implements View.OnClickListener {
     int round = 0;
     int[] sequence = _PUZZLES.firstLightsSequence;
 
-    int time = _PUZZLES.firstLightsFlashTime;
-    boolean complete = false;
+    int btnClickTime = _PUZZLES.firstLightsButtonFlashTime;
+    int time = _PUZZLES.firstLightsLampFlashTime;
 
     public FirstLights() {
     }
@@ -67,18 +68,30 @@ public class FirstLights extends Fragment implements View.OnClickListener {
                     round += 1;
                 else
                     round = 0;
+
+                btn1.setIcon("lamp_button_on");
+                handler.postDelayed(() -> { btn1.setIcon("none"); }, btnClickTime);
+
                 break;
             case (R.id.firstLights2):
                 if (sequence[round] == 2)
                     round += 1;
                 else
                     round = 0;
+
+                btn2.setIcon("lamp_button_on");
+                handler.postDelayed(() -> { btn2.setIcon("none"); }, btnClickTime);
+
                 break;
             case (R.id.firstLights3):
                 if (sequence[round] == 3)
                     round += 1;
                 else
                     round = 0;
+
+                btn3.setIcon("lamp_button_on");
+                handler.postDelayed(() -> { btn3.setIcon("none"); }, btnClickTime);
+
                 break;
         }
 
@@ -112,41 +125,43 @@ public class FirstLights extends Fragment implements View.OnClickListener {
         if (round == sequence.length) {
             setPuzzleUsed("FirstLights", 1);
 
-            lamp.setImageResource(R.drawable.lamp3);
+            MainActivity.firstLamps = true;
+
+            lamp.setImageResource(R.drawable.lamp_on);
 
         } else {
             if (sequence[round] == 1) {
-                lamp.setImageResource(R.drawable.lamp2);
+                lamp.setImageResource(R.drawable.lamp_on);
                 handler.postDelayed(() -> {
-                    lamp.setImageResource(R.drawable.lamp1);
+                    lamp.setImageResource(R.drawable.lamp_off);
                     setButtons(true);
                 }, time);
 
             } else if (sequence[round] == 2) {
-                lamp.setImageResource(R.drawable.lamp2);
+                lamp.setImageResource(R.drawable.lamp_on);
                 handler.postDelayed(() -> {
-                    lamp.setImageResource(R.drawable.lamp1);
+                    lamp.setImageResource(R.drawable.lamp_off);
                     handler.postDelayed(() -> {
-                        lamp.setImageResource(R.drawable.lamp2);
+                        lamp.setImageResource(R.drawable.lamp_on);
                         handler.postDelayed(() -> {
-                            lamp.setImageResource(R.drawable.lamp1);
+                            lamp.setImageResource(R.drawable.lamp_off);
                             setButtons(true);
                         }, time);
                     }, time);
                 }, time);
 
             } else {
-                lamp.setImageResource(R.drawable.lamp2);
+                lamp.setImageResource(R.drawable.lamp_on);
                 handler.postDelayed(() -> {
-                    lamp.setImageResource(R.drawable.lamp1);
+                    lamp.setImageResource(R.drawable.lamp_off);
                     handler.postDelayed(() -> {
-                        lamp.setImageResource(R.drawable.lamp2);
+                        lamp.setImageResource(R.drawable.lamp_on);
                         handler.postDelayed(() -> {
-                            lamp.setImageResource(R.drawable.lamp1);
+                            lamp.setImageResource(R.drawable.lamp_off);
                             handler.postDelayed(() -> {
-                                lamp.setImageResource(R.drawable.lamp2);
+                                lamp.setImageResource(R.drawable.lamp_on);
                                 handler.postDelayed(() -> {
-                                    lamp.setImageResource(R.drawable.lamp1);
+                                    lamp.setImageResource(R.drawable.lamp_off);
                                     setButtons(true);
                                 }, time);
                             }, time);

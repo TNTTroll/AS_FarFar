@@ -3,6 +3,7 @@ package com.example.far_faraway;
 import static com.example.far_faraway.Scene.getResId;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 
@@ -30,7 +31,11 @@ public class Holder extends androidx.appcompat.widget.AppCompatButton {
         name = _name;
         need = _need.trim();
         icon = ResourcesCompat.getDrawable(getResources(), getResId(_icon, R.drawable.class), null);
-        this.setBackground( icon );
+
+        if (_icon.equals("none"))
+            this.setBackgroundColor(Color.TRANSPARENT);
+        else
+            this.setBackground( icon );
     }
 
     public boolean setItem(Object obj) {

@@ -3,13 +3,16 @@ package com.example.far_faraway.Puzzles;
 import static com.example.far_faraway.Scene.getResId;
 import static com.example.far_faraway.Scene.setPuzzleUsed;
 
+import android.graphics.Point;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.far_faraway.MainActivity;
@@ -17,7 +20,10 @@ import com.example.far_faraway.Object;
 import com.example.far_faraway.R;
 import com.example.far_faraway.RoomOne;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 
 public class FirstPipes extends Fragment implements View.OnClickListener {
 
@@ -28,13 +34,18 @@ public class FirstPipes extends Fragment implements View.OnClickListener {
     private String mParam2;
 
     View view;
-    ImageView pipeImage;
+    ImageButton pipeImage;
     Object back;
 
     int pipeCount = _PUZZLES.firstPipesSequence.length;
 
     int[] pipeAngle = new int[pipeCount];
     int[] pipeAngleCorrect = _PUZZLES.firstPipesSequence;
+
+    int[] pipesTypes = {0, 1, 0, 2, 1, 1,
+                        0, 2, 0, 2, 0, 2,
+                        1, 1, 0, 1, 0, 2,
+                        2, 1, 2, 0, 1, 0 };
 
     public FirstPipes() {
     }
@@ -62,7 +73,7 @@ public class FirstPipes extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
 
-        if (v.getId() == R.id.firstPipeBack) {
+        if (v.getId() == R.id.firstPipeBack || v.getId() == R.id.firstPipeBGCompleted) {
             MainActivity.firstPipesAngle = pipeAngle;
             getParentFragmentManager().beginTransaction().replace(R.id.roomView, new RoomOne()).addToBackStack(null).commit();
         }
@@ -83,12 +94,6 @@ public class FirstPipes extends Fragment implements View.OnClickListener {
         if (checkPipes()) {
             pipeImage.setVisibility(View.VISIBLE);
 
-            for (int index = 1; index <= pipeCount; index++) {
-                Object pipe = (Object) view.findViewById(getResId("firstPipe_" + index, R.id.class));
-
-                pipe.setVisibility(View.GONE);
-            }
-
             setPuzzleUsed("FirstPipes", 1);
 
             MainActivity.firstElectricity = true;
@@ -104,15 +109,34 @@ public class FirstPipes extends Fragment implements View.OnClickListener {
         back = (Object) view.findViewById(R.id.firstPipeBack);
         back.setOnClickListener(this);
 
-        pipeImage = (ImageView) view.findViewById(R.id.firstPipeComplete);
+        pipeImage = (ImageButton) view.findViewById(R.id.firstPipeBGCompleted);
+        pipeImage.setZ(10);
+        pipeImage.setOnClickListener(this);
         pipeImage.setVisibility(View.GONE);
 
         pipeAngle = MainActivity.firstPipesAngle;
 
+        boolean flag = true;
+        for (int a : pipeAngle)
+            if (a != 0) {
+                flag = false;
+                break;
+            }
+
+        if (flag)
+            generatePipes();
+
         for (int index = 1; index <= pipeCount; index++) {
             Object pipe = (Object) view.findViewById(getResId("firstPipe_" + index, R.id.class));
 
-            pipe.setParam("pipe_" + index, "pipe");
+            if (pipesTypes[index - 1] == 0)
+                pipe.setParam("pipe_" + index, "pipe_straight");
+            else if (pipesTypes[index - 1] == 1)
+                pipe.setParam("pipe_" + index, "pipe_corner_right");
+            else
+                pipe.setParam("pipe_" + index, "pipe_corner_left");
+
+            setPosition(pipe);
             pipe.setRotation((pipeAngle[index - 1]) * 90);
             pipe.setOnClickListener(this);
         }
@@ -120,12 +144,31 @@ public class FirstPipes extends Fragment implements View.OnClickListener {
         return view;
     }
 
+    private void generatePipes() {
+        Random random = new Random();
+        for (int index = 0; index < pipeCount; index++)
+            pipeAngle[index] = random.nextInt(3);
+
+    }
+
     private boolean checkPipes() {
         for (int x = 0; x < pipeAngle.length; x++) {
-            if (pipeAngle[x] != pipeAngleCorrect[x])
+            if (pipeAngle[x] != pipeAngleCorrect[x] && pipeAngleCorrect[x] != -1)
                 return false;
         }
 
         return true;
+    }
+
+    private void setPosition(Object obj) {
+
+        Point size = new Point();
+        MainActivity.display.getSize(size);
+
+        double width = size.x * 0.198;
+        double height = size.y * 0.13;
+
+        obj.setX( (int) width );
+        obj.setY( (int) height );
     }
 }

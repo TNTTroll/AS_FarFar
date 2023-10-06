@@ -1,50 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Puzzles.FirstSigns">
 
+    <ImageButton
+        android:id="@+id/firstSignsBGOpen"
+        android:scaleType="matrix"
+        android:adjustViewBounds="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-0dp"
+        android:layout_marginEnd="-0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/bg_first_symbols_open" />
+
+    <ImageButton
+        android:id="@+id/firstSignsBGClose"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-0dp"
+        android:layout_marginEnd="-0dp"
+        android:layout_marginBottom="0dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/bg_first_symbols_close"
+        android:scaleType="matrix" />
 
     <com.example.far_faraway.Object
         android:id="@+id/firstSignsBack"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="648dp"
-        android:layout_marginTop="329dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
         android:background="@drawable/back"
         android:contentDescription="@string/app_name" />
 
     <com.example.far_faraway.Object
         android:id="@+id/firstSigns_1"
-        android:layout_width="71dp"
-        android:layout_height="67dp"
-        android:background="@drawable/sign_1"
+        android:layout_width="200px"
+        android:layout_height="140px"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="66dp"
-        android:layout_marginTop="148dp" />
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/symbol_candle_1" />
 
     <com.example.far_faraway.Object
         android:id="@+id/firstSigns_2"
-        android:layout_width="71dp"
-        android:layout_height="67dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="149dp"
-        android:background="@drawable/sign_1" />
+        android:layout_width="200px"
+        android:layout_height="140px"
+        android:layout_alignTop="@+id/firstSigns_1"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/firstSigns_1"
+        android:background="@drawable/symbol_flower_1" />
 
     <com.example.far_faraway.Object
         android:id="@+id/firstSigns_3"
-        android:layout_width="71dp"
-        android:layout_height="67dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="268dp"
-        android:layout_marginTop="149dp"
-        android:background="@drawable/sign_1" />
+        android:layout_width="200px"
+        android:layout_height="140px"
+        android:layout_alignTop="@+id/firstSigns_2"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/firstSigns_2"
+        android:background="@drawable/symbol_alcohol_1" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstSigns_4"
+        android:layout_width="200px"
+        android:layout_height="140px"
+        android:layout_alignTop="@+id/firstSigns_3"
+        android:layout_marginStart="-0dp"
+        android:layout_marginTop="-0dp"
+        android:layout_toEndOf="@+id/firstSigns_3"
+        android:background="@drawable/symbol_shirt_1" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstSigns_5"
+        android:layout_width="200px"
+        android:layout_height="140px"
+        android:layout_below="@+id/firstSigns_1"
+        android:layout_alignStart="@+id/firstSigns_1"
+        android:layout_marginStart="-0dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/symbol_apple_1" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstSigns_6"
+        android:layout_width="200px"
+        android:layout_height="140px"
+        android:layout_below="@+id/firstSigns_2"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/firstSigns_5"
+        android:background="@drawable/symbol_fish_1" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstSigns_7"
+        android:layout_width="200px"
+        android:layout_height="140px"
+        android:layout_below="@+id/firstSigns_3"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-0dp"
+        android:layout_toEndOf="@+id/firstSigns_6"
+        android:background="@drawable/symbol_knife_1" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstSigns_8"
+        android:layout_width="200px"
+        android:layout_height="140px"
+        android:layout_below="@+id/firstSigns_4"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/firstSigns_7"
+        android:background="@drawable/symbol_teapot_1" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstSigns_9"
+        android:layout_width="200px"
+        android:layout_height="140px"
+        android:layout_below="@+id/firstSigns_5"
+        android:layout_alignStart="@+id/firstSigns_5"
+        android:layout_marginStart="-0dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/symbol_cigar_1" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstSigns_10"
+        android:layout_width="200px"
+        android:layout_height="140px"
+        android:layout_below="@+id/firstSigns_6"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/firstSigns_9"
+        android:background="@drawable/symbol_cup_1" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstSigns_11"
+        android:layout_width="200px"
+        android:layout_height="140px"
+        android:layout_below="@+id/firstSigns_7"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/firstSigns_10"
+        android:background="@drawable/symbol_juice_1" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstSigns_12"
+        android:layout_width="200px"
+        android:layout_height="140px"
+        android:layout_below="@+id/firstSigns_8"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/firstSigns_11"
+        android:background="@drawable/symbol_ring_1" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstSigns_13"
+        android:layout_width="200px"
+        android:layout_height="140px"
+        android:layout_below="@+id/firstSigns_9"
+        android:layout_alignStart="@+id/firstSigns_9"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/symbol_wood_1" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstSigns_14"
+        android:layout_width="200px"
+        android:layout_height="140px"
+        android:layout_below="@+id/firstSigns_10"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/firstSigns_13"
+        android:background="@drawable/symbol_hat_1" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstSigns_15"
+        android:layout_width="200px"
+        android:layout_height="140px"
+        android:layout_below="@+id/firstSigns_11"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/firstSigns_14"
+        android:background="@drawable/symbol_eye_1" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstSigns_16"
+        android:layout_width="200px"
+        android:layout_height="140px"
+        android:layout_below="@+id/firstSigns_12"
+        android:layout_marginStart="-0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/firstSigns_15"
+        android:background="@drawable/symbol_letter_1" />
 
 </RelativeLayout>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/pipesLayout"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,20 +7,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Puzzles.FirstPipes">
 
-    <ImageView
-        android:id="@+id/firstPipeComplete"
+    <ImageButton
+        android:id="@+id/firstPipeBG"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/pnc" />
+        android:background="@drawable/bg_pipes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/firstPipeBGCompleted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pipe_completed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.example.far_faraway.Object
         android:id="@+id/firstPipeBack"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="648dp"
-        android:layout_marginTop="329dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
         android:background="@drawable/back"
         android:contentDescription="@string/app_name"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,67 +46,266 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/firstPipe_1"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="168px"
+        android:layout_height="168px"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="102dp"
-        android:layout_marginTop="75dp"
-        android:background="@drawable/pipe"
+        android:background="@drawable/pipe_straight"
         android:contentDescription="@string/app_name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/firstPipeBGCompleted" />
 
     <com.example.far_faraway.Object
         android:id="@+id/firstPipe_2"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="168px"
+        android:layout_height="168px"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="347dp"
-        android:layout_marginTop="85dp"
-        android:background="@drawable/pipe"
+        android:background="@drawable/pipe_straight"
         android:contentDescription="@string/app_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/firstPipe_1"
+        app:layout_constraintTop_toTopOf="@+id/firstPipe_1" />
 
     <com.example.far_faraway.Object
         android:id="@+id/firstPipe_3"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="168px"
+        android:layout_height="168px"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="228dp"
-        android:layout_marginTop="172dp"
-        android:background="@drawable/pipe"
+        android:background="@drawable/pipe_straight"
         android:contentDescription="@string/app_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/firstPipe_2"
+        app:layout_constraintTop_toTopOf="@+id/firstPipe_2" />
 
     <com.example.far_faraway.Object
         android:id="@+id/firstPipe_4"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="168px"
+        android:layout_height="168px"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="106dp"
-        android:layout_marginTop="275dp"
-        android:background="@drawable/pipe"
+        android:background="@drawable/pipe_straight"
         android:contentDescription="@string/app_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/firstPipe_3"
+        app:layout_constraintTop_toTopOf="@+id/firstPipe_3" />
 
     <com.example.far_faraway.Object
         android:id="@+id/firstPipe_5"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="168px"
+        android:layout_height="168px"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="340dp"
-        android:layout_marginTop="277dp"
-        android:background="@drawable/pipe"
+        android:background="@drawable/pipe_straight"
         android:contentDescription="@string/app_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/firstPipe_4"
+        app:layout_constraintTop_toTopOf="@+id/firstPipe_4" />
 
-</RelativeLayout>
+    <com.example.far_faraway.Object
+        android:id="@+id/firstPipe_6"
+        android:layout_width="168px"
+        android:layout_height="168px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pipe_straight"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/firstPipe_5"
+        app:layout_constraintTop_toTopOf="@+id/firstPipe_5" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstPipe_7"
+        android:layout_width="168px"
+        android:layout_height="168px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pipe_straight"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="@+id/firstPipe_1"
+        app:layout_constraintTop_toBottomOf="@+id/firstPipe_1" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstPipe_8"
+        android:layout_width="168px"
+        android:layout_height="168px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pipe_straight"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/firstPipe_7"
+        app:layout_constraintTop_toBottomOf="@+id/firstPipe_2" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstPipe_9"
+        android:layout_width="168px"
+        android:layout_height="168px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pipe_straight"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/firstPipe_8"
+        app:layout_constraintTop_toBottomOf="@+id/firstPipe_3" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstPipe_10"
+        android:layout_width="168px"
+        android:layout_height="168px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pipe_straight"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/firstPipe_9"
+        app:layout_constraintTop_toBottomOf="@+id/firstPipe_4" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstPipe_11"
+        android:layout_width="168px"
+        android:layout_height="168px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pipe_straight"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/firstPipe_10"
+        app:layout_constraintTop_toBottomOf="@+id/firstPipe_5" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstPipe_12"
+        android:layout_width="168px"
+        android:layout_height="168px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pipe_straight"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/firstPipe_11"
+        app:layout_constraintTop_toBottomOf="@+id/firstPipe_6" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstPipe_13"
+        android:layout_width="168px"
+        android:layout_height="168px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pipe_straight"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="@+id/firstPipe_7"
+        app:layout_constraintTop_toBottomOf="@+id/firstPipe_7" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstPipe_14"
+        android:layout_width="168px"
+        android:layout_height="168px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pipe_straight"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/firstPipe_13"
+        app:layout_constraintTop_toBottomOf="@+id/firstPipe_8" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstPipe_15"
+        android:layout_width="168px"
+        android:layout_height="168px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pipe_straight"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/firstPipe_14"
+        app:layout_constraintTop_toBottomOf="@+id/firstPipe_9" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstPipe_16"
+        android:layout_width="168px"
+        android:layout_height="168px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pipe_straight"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/firstPipe_15"
+        app:layout_constraintTop_toBottomOf="@+id/firstPipe_10" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstPipe_17"
+        android:layout_width="168px"
+        android:layout_height="168px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pipe_straight"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/firstPipe_16"
+        app:layout_constraintTop_toBottomOf="@+id/firstPipe_11" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstPipe_18"
+        android:layout_width="168px"
+        android:layout_height="168px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pipe_straight"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/firstPipe_17"
+        app:layout_constraintTop_toBottomOf="@+id/firstPipe_12" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstPipe_19"
+        android:layout_width="168px"
+        android:layout_height="168px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pipe_straight"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="@+id/firstPipe_13"
+        app:layout_constraintTop_toBottomOf="@+id/firstPipe_13" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstPipe_20"
+        android:layout_width="168px"
+        android:layout_height="168px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pipe_straight"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/firstPipe_19"
+        app:layout_constraintTop_toBottomOf="@+id/firstPipe_14" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstPipe_21"
+        android:layout_width="168px"
+        android:layout_height="168px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pipe_straight"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/firstPipe_20"
+        app:layout_constraintTop_toBottomOf="@+id/firstPipe_15" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstPipe_22"
+        android:layout_width="168px"
+        android:layout_height="168px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pipe_straight"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/firstPipe_21"
+        app:layout_constraintTop_toBottomOf="@+id/firstPipe_16" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstPipe_23"
+        android:layout_width="168px"
+        android:layout_height="168px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pipe_straight"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/firstPipe_22"
+        app:layout_constraintTop_toBottomOf="@+id/firstPipe_17" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/firstPipe_24"
+        android:layout_width="168px"
+        android:layout_height="168px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pipe_straight"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/firstPipe_23"
+        app:layout_constraintTop_toBottomOf="@+id/firstPipe_18" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
