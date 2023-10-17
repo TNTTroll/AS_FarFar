@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 public class Registration extends Fragment implements View.OnClickListener {
 
@@ -17,12 +16,7 @@ public class Registration extends Fragment implements View.OnClickListener {
     private String mParam1;
     private String mParam2;
 
-    View view;
-
-    Button btn;
-
     public Registration() {
-        // Required empty public constructor
     }
 
     public static Registration newInstance(String param1, String param2) {
@@ -44,21 +38,12 @@ public class Registration extends Fragment implements View.OnClickListener {
     }
 
     @Override
-    public void onClick(View v) {
-
-    }
+    public void onClick(View v) {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_registration, container, false);
 
-        btn = (Button) view.findViewById(R.id.regDone);
-        btn = (Button) view.findViewById(R.id.regDone);
-
-        btn = (Button) view.findViewById(R.id.regDone);
-        btn.setOnClickListener(this);
-
-        return view;
+        return inflater.inflate(R.layout.fragment_registration, container, false);
     }
 }

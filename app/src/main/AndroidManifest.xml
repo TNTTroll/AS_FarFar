@@ -14,13 +14,21 @@
         android:theme="@style/Theme.FarFarAway"
         tools:targetApi="31">
         <activity
-            android:name=".Scene"
-            android:screenOrientation="landscape"
+            android:name=".Progress"
+            android:exported="false"
+            android:label="@string/title_activity_progress"
+            android:theme="@style/Theme.FarFarAway.NoActionBar" />
+        <activity
+            android:name=".Ending"
             android:exported="false" />
         <activity
+            android:name=".Scene"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".MainActivity"
-            android:screenOrientation="landscape"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

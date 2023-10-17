@@ -1,5 +1,6 @@
 package com.example.far_faraway;
 
+import static com.example.far_faraway.MainActivity.player;
 import static com.example.far_faraway.MainActivity.puzzles1;
 import static com.example.far_faraway.MainActivity.puzzles2;
 import static com.example.far_faraway.MainActivity.puzzles3;
@@ -8,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
 import android.annotation.SuppressLint;
+import android.app.Fragment;
+import android.content.Context;
 import android.graphics.Color;
 import android.media.Image;
 import android.media.ImageWriter;
@@ -17,14 +20,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.example.far_faraway.Puzzles.FirstPipes;
+
 import java.lang.reflect.Field;
 
 public class Scene extends AppCompatActivity implements View.OnClickListener {
 
-    private View roomView;
+    public View roomView;
 
     @SuppressLint("StaticFieldLeak")
-    private static ImageButton[] btn_invs = new ImageButton[4];
+    public static ImageButton[] btn_invs = new ImageButton[4];
     public static int current_Item = -1;
 
     public static Object[] inventory = new Object[4];
@@ -42,26 +47,27 @@ public class Scene extends AppCompatActivity implements View.OnClickListener {
 
     }
 
-    public void setRoomView(String room){
-        switch (room) {
-            case "1":
-                getSupportFragmentManager().beginTransaction().replace(R.id.roomView, new RoomOne()).addToBackStack(null).commit();
-                break;
-            case "2":
-                getSupportFragmentManager().beginTransaction().replace(R.id.roomView, new RoomTwo()).addToBackStack(null).commit();
-                break;
-            case "3":
-                getSupportFragmentManager().beginTransaction().replace(R.id.roomView, new RoomThree()).addToBackStack(null).commit();
-                break;
-        }
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scene);
 
         roomView = (View) findViewById(R.id.roomView);
+
+        switch (player.getLevel()) {
+            case 1:
+                getSupportFragmentManager().beginTransaction().replace(R.id.roomView, new RoomOne()).commit();
+                break;
+
+            case 2:
+                getSupportFragmentManager().beginTransaction().replace(R.id.roomView, new RoomTwo()).commit();
+                break;
+
+            case 3:
+                getSupportFragmentManager().beginTransaction().replace(R.id.roomView, new RoomThree()).commit();
+                break;
+        }
+
 
         for (int x = 0; x < btn_invs.length; x++) {
             int resID = getResId("inv_" + (x+1), R.id.class);
@@ -115,19 +121,20 @@ public class Scene extends AppCompatActivity implements View.OnClickListener {
     }
 
     public static void setPuzzleUsed(String puzzleScene, int room) {
-        if (room == 1)
+        if (room == 1) {
             for (PuzzleInfo puzzle1 : puzzles1)
                 if (puzzle1.scene.trim().equals(puzzleScene))
                     puzzle1.used = true;
 
-        else if (room == 2)
+        } else if (room == 2) {
             for (PuzzleInfo puzzle2 : puzzles2)
                 if (puzzle2.scene.trim().equals(puzzleScene))
                     puzzle2.used = true;
-        else
+        } else {
             for (PuzzleInfo puzzle3 : puzzles3)
                 if (puzzle3.scene.trim().equals(puzzleScene))
                     puzzle3.used = true;
+        }
 
     }
 }

@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -76,7 +77,7 @@ public class FirstTable extends Fragment implements View.OnClickListener {
         }
 
         if (active_flask != null)
-            active_flask.setY( height - 50 );
+            active_flask.setY( height - _PUZZLES.firstTableAddHeight );
 
         switch (v.getId()) {
             case (R.id.firstTableBack):
@@ -102,25 +103,23 @@ public class FirstTable extends Fragment implements View.OnClickListener {
 
                     if (flag)
                         MainActivity.firstTableMedicineDone = true;
+                    else {
+                        if (usedFlask == needMix.length) {
+                            active_flask = null;
+
+                            usedFlask = 0;
+                            Arrays.fill(useMix, 0);
+                        }
+                    }
 
                     if (MainActivity.firstTableMedicineDone) {
                         mixer.setVisibility(View.GONE);
 
                         anti.setVisibility(View.VISIBLE);
-                        anti.setParam("firstAnti", "iron");
-                        anti.setOnClickListener(this);
 
                         active_flask = null;
                     }
                 }
-
-                break;
-
-            case (R.id.firstTableClear):
-                active_flask = null;
-
-                usedFlask = 0;
-                Arrays.fill(useMix, 0);
 
                 break;
 
@@ -132,8 +131,6 @@ public class FirstTable extends Fragment implements View.OnClickListener {
                     if (taken) {
                         obj.setVisibility(View.GONE);
                         MainActivity.firstTableTookAnti = true;
-
-                        setPuzzleUsed("FirstTable", 1);
                     }
                 }
 
@@ -157,7 +154,7 @@ public class FirstTable extends Fragment implements View.OnClickListener {
         for (int x = 0; x < flasks.length; x++) {
             int resID = getResId("firstTableFlask_" + (x+1), R.id.class);
             Object flask = (Object) view.findViewById(resID);
-            flask.setParam("firstTableFlask_" + (x+1), "flask");
+            flask.setParam("firstTableFlask_" + (x+1), "table_flask_" + (x+1));
             flask.setOnClickListener(this);
 
             flasks[x] = flask;
@@ -165,25 +162,22 @@ public class FirstTable extends Fragment implements View.OnClickListener {
 
         mixer = (Holder) view.findViewById(R.id.firstTableMixer);
         if (!MainActivity.firstTableMedicineDone) {
-            mixer.setParam("firstTableMixer","firstTableFlask" + needMix[0], "can_0");
+            mixer.setParam("firstTableMixer","firstTableFlask" + needMix[0], "table_mixer_1");
             mixer.setOnClickListener(this);
         } else
             mixer.setVisibility(View.GONE);
 
-        clear = (Object) view.findViewById(R.id.firstTableClear);
-        clear.setOnClickListener(this);
-
         anti = (Object) view.findViewById(R.id.firstTableAnti);
-        if (!MainActivity.firstTableTookAnti && MainActivity.firstTableMedicineDone) {
-            anti.setParam("firstAnti", "iron");
-            anti.setOnClickListener(this);
-        } else
+        anti.setParam("firstAnti", "table_mixer_5");
+        anti.setOnClickListener(this);
+
+        if (MainActivity.firstTableTookAnti || !MainActivity.firstTableMedicineDone)
             anti.setVisibility(View.GONE);
 
         return view;
     }
 
     private void changeMixerFace() {
-        mixer.setIcon("can_" + usedFlask);
+        mixer.setIcon("table_mixer_" + (usedFlask + 1));
     }
 }

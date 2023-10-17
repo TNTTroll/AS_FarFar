@@ -1,5 +1,7 @@
 package com.example.far_faraway.Puzzles;
 
+import static com.example.far_faraway.MainActivity.objects1;
+import static com.example.far_faraway.Scene.getResId;
 import static com.example.far_faraway.Scene.setPuzzleUsed;
 
 import android.os.Bundle;
@@ -14,6 +16,7 @@ import android.widget.ImageView;
 
 import com.example.far_faraway.MainActivity;
 import com.example.far_faraway.Object;
+import com.example.far_faraway.ObjectInfo;
 import com.example.far_faraway.R;
 import com.example.far_faraway.RoomOne;
 
@@ -64,7 +67,7 @@ public class FirstLights extends Fragment implements View.OnClickListener {
 
         if (MainActivity.firstElectricity) {
             switch (v.getId()) {
-                case (R.id.firstLights1):
+                case (R.id.firstLights_1):
                     if (sequence[round] == 1)
                         round += 1;
                     else
@@ -77,7 +80,7 @@ public class FirstLights extends Fragment implements View.OnClickListener {
 
                     break;
 
-                case (R.id.firstLights2):
+                case (R.id.firstLights_2):
                     if (sequence[round] == 2)
                         round += 1;
                     else
@@ -90,7 +93,7 @@ public class FirstLights extends Fragment implements View.OnClickListener {
 
                     break;
 
-                case (R.id.firstLights3):
+                case (R.id.firstLights_3):
                     if (sequence[round] == 3)
                         round += 1;
                     else
@@ -117,9 +120,9 @@ public class FirstLights extends Fragment implements View.OnClickListener {
         view = inflater.inflate(R.layout.fragment_first_lights, container, false);
 
         back = (Object) view.findViewById(R.id.firstLightsBack);
-        btn1 = (Object) view.findViewById(R.id.firstLights1);
-        btn2 = (Object) view.findViewById(R.id.firstLights2);
-        btn3 = (Object) view.findViewById(R.id.firstLights3);
+        btn1 = (Object) view.findViewById(R.id.firstLights_1);
+        btn2 = (Object) view.findViewById(R.id.firstLights_2);
+        btn3 = (Object) view.findViewById(R.id.firstLights_3);
         lamp = (ImageView) view.findViewById(R.id.firstLightsLamp);
 
         back.setOnClickListener(this);

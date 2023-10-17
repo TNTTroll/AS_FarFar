@@ -1,15 +1,12 @@
 package com.example.far_faraway.Puzzles;
 
 import static com.example.far_faraway.Scene.getResId;
-import static com.example.far_faraway.Scene.setPuzzleUsed;
 
 import android.graphics.Point;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,10 +34,9 @@ public class FirstSigns extends Fragment implements View.OnClickListener {
                            "cigar", "cup", "juice", "ring",
                            "wood", "hat", "eye", "letter" };
 
-    int signsCount = _PUZZLES.firstSignsSequence.length;
+    int signsCount = _PUZZLES.firstSignsLength;
 
     boolean[] signsTurn = new boolean[signsCount];
-    boolean[] signsTurnCorrect = _PUZZLES.firstSignsSequence;
 
     public FirstSigns() {
     }

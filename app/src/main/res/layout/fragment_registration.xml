@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="350dp"
     android:layout_height="match_parent"
     tools:context=".Registration">
 
-    <!-- TODO: Update blank fragment layout -->
-
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sibas_color_0" />
 
     <Button
         android:id="@+id/regDone"
@@ -14,19 +18,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="109dp"
-        android:layout_marginTop="278dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="304dp"
         android:text="Ok" />
-
-    <TextView
-        android:id="@+id/regText"
-        android:layout_width="204dp"
-        android:layout_height="47dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="31dp"
-        android:text="Type down your name" />
 
     <EditText
         android:id="@+id/regName"
@@ -34,20 +28,32 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="118dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="63dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:hint="Name"
+        android:inputType="textPersonName" />
 
-    <CheckBox
-        android:id="@+id/regAge"
-        android:layout_width="224dp"
-        android:layout_height="73dp"
+    <com.example.far_faraway.Object
+        android:id="@+id/regCaptcha"
+        android:layout_width="210dp"
+        android:layout_height="67dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="181dp"
-        android:text="I am older 18 and I know that here could be porno" />
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="134dp"
+        android:background="@drawable/captcha_1" />
+
+    <EditText
+        android:id="@+id/regCaptchaAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="225dp"
+        android:ems="10"
+        android:hint="Number"
+        android:inputType="number" />
 
 </RelativeLayout>

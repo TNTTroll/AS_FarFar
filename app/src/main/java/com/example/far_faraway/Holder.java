@@ -13,7 +13,6 @@ public class Holder extends androidx.appcompat.widget.AppCompatButton {
     String name;
     Object keep;
     String need;
-    Drawable icon;
 
     public Holder(Context context) {
         super(context);
@@ -30,12 +29,11 @@ public class Holder extends androidx.appcompat.widget.AppCompatButton {
     public void setParam(String _name, String _need, String _icon) {
         name = _name;
         need = _need.trim();
-        icon = ResourcesCompat.getDrawable(getResources(), getResId(_icon, R.drawable.class), null);
 
         if (_icon.equals("none"))
             this.setBackgroundColor(Color.TRANSPARENT);
         else
-            this.setBackground( icon );
+            this.setBackground( ResourcesCompat.getDrawable(getResources(), getResId(_icon, R.drawable.class), null) );
     }
 
     public boolean setItem(Object obj) {
@@ -49,7 +47,10 @@ public class Holder extends androidx.appcompat.widget.AppCompatButton {
     }
 
     public void setIcon(String _newIcon) {
-        icon = ResourcesCompat.getDrawable(getResources(), getResId(_newIcon, R.drawable.class), null);
-        this.setBackground( icon );
+
+        if (_newIcon.equals("none"))
+            this.setBackgroundColor(Color.TRANSPARENT);
+        else
+            this.setBackground( ResourcesCompat.getDrawable(getResources(), getResId(_newIcon, R.drawable.class), null) );
     }
 }

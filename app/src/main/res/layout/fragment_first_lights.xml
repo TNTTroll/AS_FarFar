@@ -63,7 +63,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.example.far_faraway.Object
-        android:id="@+id/firstLights1"
+        android:id="@+id/firstLights_1"
         android:layout_width="105dp"
         android:layout_height="133dp"
         android:layout_alignParentStart="true"
@@ -77,7 +77,7 @@
         app:layout_constraintVertical_bias="0.225" />
 
     <com.example.far_faraway.Object
-        android:id="@+id/firstLights2"
+        android:id="@+id/firstLights_2"
         android:layout_width="105dp"
         android:layout_height="133dp"
         android:layout_alignParentStart="true"
@@ -90,7 +90,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.example.far_faraway.Object
-        android:id="@+id/firstLights3"
+        android:id="@+id/firstLights_3"
         android:layout_width="105dp"
         android:layout_height="133dp"
         android:layout_alignParentStart="true"

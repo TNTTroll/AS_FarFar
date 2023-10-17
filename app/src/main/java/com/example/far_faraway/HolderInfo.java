@@ -11,4 +11,10 @@ public class HolderInfo {
         need = _need;
         icon = _icon;
     }
+
+    public String getName() { return name; }
+
+    public String getNeed() { return need; }
+
+    public String getIcon() { return icon; }
 }
