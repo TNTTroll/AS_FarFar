@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Puzzles.ThirdAdjacent">
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdAdjacentBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/back"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdAdjacent_1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/lamp_off"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdAdjacent_2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/lamp_off"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdAdjacent_1"
+        app:layout_constraintTop_toTopOf="@+id/thirdAdjacent_1" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdAdjacent_3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/lamp_off"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdAdjacent_2"
+        app:layout_constraintTop_toTopOf="@+id/thirdAdjacent_2" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdAdjacent_4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/lamp_off"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdAdjacent_3"
+        app:layout_constraintTop_toTopOf="@+id/thirdAdjacent_3" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdAdjacent_5"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/lamp_off"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="@+id/thirdAdjacent_1"
+        app:layout_constraintTop_toBottomOf="@+id/thirdAdjacent_1" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdAdjacent_6"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/lamp_off"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdAdjacent_5"
+        app:layout_constraintTop_toBottomOf="@+id/thirdAdjacent_2" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdAdjacent_7"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/lamp_off"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdAdjacent_6"
+        app:layout_constraintTop_toBottomOf="@+id/thirdAdjacent_3" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdAdjacent_8"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/lamp_off"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdAdjacent_7"
+        app:layout_constraintTop_toBottomOf="@+id/thirdAdjacent_4" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdAdjacent_9"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/lamp_off"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="@+id/thirdAdjacent_5"
+        app:layout_constraintTop_toBottomOf="@+id/thirdAdjacent_5" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdAdjacent_10"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/lamp_off"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdAdjacent_9"
+        app:layout_constraintTop_toBottomOf="@+id/thirdAdjacent_6" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdAdjacent_11"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/lamp_off"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdAdjacent_10"
+        app:layout_constraintTop_toBottomOf="@+id/thirdAdjacent_7" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdAdjacent_12"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/lamp_off"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdAdjacent_11"
+        app:layout_constraintTop_toBottomOf="@+id/thirdAdjacent_8" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdAdjacent_13"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/lamp_off"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="@+id/thirdAdjacent_9"
+        app:layout_constraintTop_toBottomOf="@+id/thirdAdjacent_9" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdAdjacent_14"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/lamp_off"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdAdjacent_13"
+        app:layout_constraintTop_toBottomOf="@+id/thirdAdjacent_10" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdAdjacent_15"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/lamp_off"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdAdjacent_14"
+        app:layout_constraintTop_toBottomOf="@+id/thirdAdjacent_11" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdAdjacent_16"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/lamp_off"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdAdjacent_15"
+        app:layout_constraintTop_toBottomOf="@+id/thirdAdjacent_12" />
+
+    <ImageButton
+        android:id="@+id/thirdAdjacentImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/maze"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

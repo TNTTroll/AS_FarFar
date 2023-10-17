@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Puzzles.ThirdTeeth">
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdTeethBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/back"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdTeethRestart"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="312dp"
+        android:layout_marginTop="356dp"
+        android:background="@drawable/restart"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdTeethClick_1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdTeethClick_2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdTeethClick_1"
+        app:layout_constraintTop_toTopOf="@+id/thirdTeethClick_1" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdTeethClick_3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdTeethClick_2"
+        app:layout_constraintTop_toTopOf="@+id/thirdTeethClick_2" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdTeethClick_4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="@+id/thirdTeethClick_1"
+        app:layout_constraintTop_toBottomOf="@+id/thirdTeethClick_1" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdTeethClick_5"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdTeethClick_4"
+        app:layout_constraintTop_toBottomOf="@+id/thirdTeethClick_2" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdTeethClick_6"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdTeethClick_5"
+        app:layout_constraintTop_toBottomOf="@+id/thirdTeethClick_3" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdTeethClick_7"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="@+id/thirdTeethClick_4"
+        app:layout_constraintTop_toBottomOf="@+id/thirdTeethClick_4" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdTeethClick_8"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdTeethClick_7"
+        app:layout_constraintTop_toBottomOf="@+id/thirdTeethClick_5" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdTeethClick_9"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdTeethClick_8"
+        app:layout_constraintTop_toBottomOf="@+id/thirdTeethClick_6" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdTeethShow_1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="52dp"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdTeethClick_3"
+        app:layout_constraintTop_toTopOf="@+id/thirdTeethClick_3" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdTeethShow_2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdTeethShow_1"
+        app:layout_constraintTop_toTopOf="@+id/thirdTeethShow_1" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdTeethShow_3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdTeethShow_2"
+        app:layout_constraintTop_toTopOf="@+id/thirdTeethShow_2" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdTeethShow_4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="@+id/thirdTeethShow_1"
+        app:layout_constraintTop_toBottomOf="@+id/thirdTeethShow_1" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdTeethShow_5"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdTeethShow_4"
+        app:layout_constraintTop_toBottomOf="@+id/thirdTeethShow_2" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdTeethShow_6"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdTeethShow_5"
+        app:layout_constraintTop_toBottomOf="@+id/thirdTeethShow_3" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdTeethShow_7"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="@+id/thirdTeethShow_4"
+        app:layout_constraintTop_toBottomOf="@+id/thirdTeethShow_4" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdTeethShow_8"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdTeethShow_7"
+        app:layout_constraintTop_toBottomOf="@+id/thirdTeethShow_5" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdTeethShow_9"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdTeethShow_8"
+        app:layout_constraintTop_toBottomOf="@+id/thirdTeethShow_6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

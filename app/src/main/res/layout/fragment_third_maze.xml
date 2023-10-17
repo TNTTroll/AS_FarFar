@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Puzzles.ThirdMaze">
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMazeBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/back"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdMaze_1"
+        app:layout_constraintTop_toTopOf="@+id/thirdMaze_1" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdMaze_2"
+        app:layout_constraintTop_toTopOf="@+id/thirdMaze_2" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdMaze_3"
+        app:layout_constraintTop_toTopOf="@+id/thirdMaze_3" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_5"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdMaze_4"
+        app:layout_constraintTop_toTopOf="@+id/thirdMaze_4" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_6"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="@+id/thirdMaze_1"
+        app:layout_constraintTop_toBottomOf="@+id/thirdMaze_1" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_7"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdMaze_6"
+        app:layout_constraintTop_toBottomOf="@+id/thirdMaze_2" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_8"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdMaze_7"
+        app:layout_constraintTop_toBottomOf="@+id/thirdMaze_3" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_9"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdMaze_8"
+        app:layout_constraintTop_toBottomOf="@+id/thirdMaze_4" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_10"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdMaze_9"
+        app:layout_constraintTop_toBottomOf="@+id/thirdMaze_5" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_11"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="@+id/thirdMaze_6"
+        app:layout_constraintTop_toBottomOf="@+id/thirdMaze_6" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_12"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdMaze_11"
+        app:layout_constraintTop_toBottomOf="@+id/thirdMaze_7" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_13"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdMaze_12"
+        app:layout_constraintTop_toBottomOf="@+id/thirdMaze_8" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_14"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdMaze_13"
+        app:layout_constraintTop_toBottomOf="@+id/thirdMaze_9" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_15"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdMaze_14"
+        app:layout_constraintTop_toBottomOf="@+id/thirdMaze_10" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_16"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="@+id/thirdMaze_11"
+        app:layout_constraintTop_toBottomOf="@+id/thirdMaze_11" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_17"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdMaze_16"
+        app:layout_constraintTop_toBottomOf="@+id/thirdMaze_12" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_18"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdMaze_17"
+        app:layout_constraintTop_toBottomOf="@+id/thirdMaze_13" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_19"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdMaze_18"
+        app:layout_constraintTop_toBottomOf="@+id/thirdMaze_14" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_20"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdMaze_19"
+        app:layout_constraintTop_toBottomOf="@+id/thirdMaze_15" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_21"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="@+id/thirdMaze_16"
+        app:layout_constraintTop_toBottomOf="@+id/thirdMaze_16" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_22"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdMaze_21"
+        app:layout_constraintTop_toBottomOf="@+id/thirdMaze_17" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_23"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdMaze_22"
+        app:layout_constraintTop_toBottomOf="@+id/thirdMaze_18" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_24"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdMaze_23"
+        app:layout_constraintTop_toBottomOf="@+id/thirdMaze_19" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdMaze_25"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/plate_1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/thirdMaze_24"
+        app:layout_constraintTop_toBottomOf="@+id/thirdMaze_20" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
