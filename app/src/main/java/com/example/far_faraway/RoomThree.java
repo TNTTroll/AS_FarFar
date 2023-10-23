@@ -78,40 +78,6 @@ public class RoomThree extends Fragment implements View.OnClickListener {
             }
         }
 
-        // << Holders
-        for (HolderInfo holder : holders3) {
-            int resID = getResId(holder.name, R.id.class);
-
-            if (resID == v.getId()) {
-                Holder hold = (Holder) view.findViewById(resID);
-
-                if (current_Item != -1) {
-                    boolean taken = hold.setItem(inventory[current_Item]);
-
-                    if (taken) {
-
-                        if ("thirdFlower".equals(hold.name)) {
-                            current_Item = -1;
-
-                            hold.setIcon("flower_2");
-
-                            MainActivity.flowers[2] = true;
-                        }
-
-                    } else {
-                        // Wrong item. Hint
-                        Toast.makeText(getActivity(), "Try something else", Toast.LENGTH_LONG).show();
-                    }
-
-                } else {
-                    // No item. Hint
-                    Toast.makeText(getActivity(), "I need to put something here", Toast.LENGTH_LONG).show();
-                }
-
-                break;
-            }
-        }
-
         // <<< Puzzles
         for (PuzzleInfo puzzle : puzzles3) {
             int resID = getResId(puzzle.name, R.id.class);

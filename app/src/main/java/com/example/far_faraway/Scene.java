@@ -4,21 +4,26 @@ import static com.example.far_faraway.MainActivity.player;
 import static com.example.far_faraway.MainActivity.puzzles1;
 import static com.example.far_faraway.MainActivity.puzzles2;
 import static com.example.far_faraway.MainActivity.puzzles3;
+import static com.example.far_faraway.MainActivity.thisContext;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.app.Fragment;
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.media.Image;
 import android.media.ImageWriter;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.far_faraway.Puzzles.FirstPipes;
 
@@ -27,6 +32,8 @@ import java.lang.reflect.Field;
 public class Scene extends AppCompatActivity implements View.OnClickListener {
 
     public View roomView;
+
+    public static Dialog dialog_texting;
 
     @SuppressLint("StaticFieldLeak")
     public static ImageButton[] btn_invs = new ImageButton[4];
@@ -53,6 +60,8 @@ public class Scene extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_scene);
 
         roomView = (View) findViewById(R.id.roomView);
+
+        dialog_texting = new Dialog(this);
 
         switch (player.getLevel()) {
             case 1:
@@ -135,6 +144,19 @@ public class Scene extends AppCompatActivity implements View.OnClickListener {
                 if (puzzle3.scene.trim().equals(puzzleScene))
                     puzzle3.used = true;
         }
-
     }
+
+    public static void showText(String text) {
+        dialog_texting.setContentView(R.layout.fragment_texting);
+
+        Object back = (Object) dialog_texting.findViewById(R.id.textingBack);
+        back.setOnClickListener(v -> dialog_texting.dismiss());
+
+        TextView lor = (TextView) dialog_texting.findViewById(R.id.textingText);
+        lor.setText(text);
+
+        dialog_texting.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog_texting.show();
+    }
+
 }

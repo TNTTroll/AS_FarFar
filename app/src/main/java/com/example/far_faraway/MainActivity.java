@@ -1,5 +1,6 @@
 package com.example.far_faraway;
 
+import static com.example.far_faraway.Scene.getResId;
 import static com.example.far_faraway.Scene.reloadInventory;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Display;
@@ -34,11 +36,16 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
+    // MainActivity.setLevel(lvl);
+    // MainActivity.setAchievement(_PUZZLES.achievements[index]);
+    // MainActivity.playAudio("song");
+    // Scene.showText(_PUZZLES.lore[index]);
+
     // <<< Savings
     public static final String saveFile = "Player.txt";
     public static Player player = new Player();
 
-    private Dialog dialog_player;
+    private Dialog dialog_player, dialog_lvl, dialog_tutorial;
 
     public static MainActivity thisContext;
 
@@ -58,7 +65,8 @@ public class MainActivity extends AppCompatActivity {
     public static ArrayList<PuzzleInfo> puzzles3 = new ArrayList<>();
 
     // <<< Additional
-    public static boolean[] flowers = new boolean[3];
+    public static int wateredFlowers = 1;
+    public static int[] flowers = new int[3];
 
     // FIRST
     public static boolean[] firstSignsTurn = new boolean[_PUZZLES.firstSignsLength];
@@ -108,6 +116,11 @@ public class MainActivity extends AppCompatActivity {
         display = getWindowManager().getDefaultDisplay();
 
         dialog_player = new Dialog(this);
+        dialog_lvl = new Dialog(this);
+        dialog_tutorial = new Dialog(this);
+
+        ImageButton bg = (ImageButton) findViewById(R.id.mainBG);
+        bg.setEnabled(false);
 
         if (!loadInfo()) {
             try {
@@ -132,6 +145,20 @@ public class MainActivity extends AppCompatActivity {
             startActivity(scene);
         });
 
+        Button level = (Button) findViewById(R.id.menuBtnLevel);
+        level.setOnClickListener(view -> openLevels(findViewById(R.id.menuMain)));
+
+        Button tutorial = (Button) findViewById(R.id.menuBtnTutorial);
+        tutorial.setOnClickListener(view -> {
+            dialog_tutorial.setContentView(R.layout.fragment_tutorial);
+
+            Object back = (Object) dialog_tutorial.findViewById(R.id.tutorialBack);
+            back.setOnClickListener(v -> dialog_tutorial.dismiss());
+
+            dialog_tutorial.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            dialog_tutorial.show();
+        });
+
         Button clear = (Button) findViewById(R.id.menuBtnClear);
         clear.setVisibility(View.GONE);
         clear.setOnClickListener(view -> {
@@ -145,6 +172,8 @@ public class MainActivity extends AppCompatActivity {
             sure.setVisibility(View.GONE);
             clear.setVisibility(View.VISIBLE);
         });
+
+        wateredFlowers = flowers[0] + flowers[1] + flowers[2] + 1;
 
     }
 
@@ -216,6 +245,46 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void openLevels(View view) {
+        dialog_lvl.setContentView(R.layout.fragment_levels);
+
+        ImageButton no = (ImageButton) dialog_lvl.findViewById(R.id.lvlNo);
+        no.setOnClickListener(v -> dialog_lvl.dismiss());
+
+        ImageButton lvl_1 = (ImageButton) dialog_lvl.findViewById(R.id.lvl_1);
+        lvl_1.setOnClickListener(v -> {
+            setLevel(1);
+
+            Intent scene = new Intent(MainActivity.thisContext, Scene.class);
+            startActivity(scene);
+
+            dialog_lvl.dismiss();
+        });
+
+        ImageButton lvl_2 = (ImageButton) dialog_lvl.findViewById(R.id.lvl_2);
+        lvl_2.setOnClickListener(v -> {
+            setLevel(2);
+
+            Intent scene = new Intent(MainActivity.thisContext, Scene.class);
+            startActivity(scene);
+
+            dialog_lvl.dismiss();
+        });
+
+        ImageButton lvl_3 = (ImageButton) dialog_lvl.findViewById(R.id.lvl_3);
+        lvl_3.setOnClickListener(v -> {
+            setLevel(3);
+
+            Intent scene = new Intent(MainActivity.thisContext, Scene.class);
+            startActivity(scene);
+
+            dialog_lvl.dismiss();
+        });
+
+        dialog_lvl.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog_lvl.show();
+    }
+
     private void openRegistration(View view) throws IOException {
         dialog_player.setContentView(R.layout.fragment_registration);
 
@@ -253,7 +322,7 @@ public class MainActivity extends AppCompatActivity {
 
                         player.setParam(playerInfo, 1 );
 
-                        playerInfo = playerInfo + "&1" + '\n';
+                        playerInfo = playerInfo + "&1&000" + '\n';
                         outputStream.write(playerInfo.getBytes());
 
                         outputStream.close();
@@ -266,6 +335,7 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        dialog_player.setCanceledOnTouchOutside(false);
         dialog_player.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog_player.show();
     }
@@ -282,6 +352,9 @@ public class MainActivity extends AppCompatActivity {
 
             player.setParam(information_Player[0], Integer.parseInt(information_Player[1]) );
 
+            for (int index = 0; index < 3; index++)
+                flowers[index] = Integer.parseInt("" + information_Player[2].charAt(index));
+
             inputS.close();
 
             return information_Player[0].length() != 0;
@@ -293,7 +366,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // MainActivity.setLevel(lvl);
     public static void setLevel(int level) {
 
         List<String> playerAchievements = new ArrayList<String>();
@@ -325,7 +397,7 @@ public class MainActivity extends AppCompatActivity {
             player.setParam(player.getName(), level);
 
             assert outputStream != null;
-            String playerInfo = player.getName() + "&" + level + '\n';
+            String playerInfo = player.getName() + "&" + level + "&" + flowers[0] + flowers[1] + flowers[2] + '\n';
             outputStream.write(playerInfo.getBytes());
 
             for (String str : playerAchievements)
@@ -360,7 +432,6 @@ public class MainActivity extends AppCompatActivity {
         return playerAchievements.contains(achieve.trim());
     }
 
-    // MainActivity.setAchievement(_PUZZLES.achievements[index]);
     public static void setAchievement(String achieve) {
 
         List<String> playerAchievements = new ArrayList<String>();
@@ -407,49 +478,22 @@ public class MainActivity extends AppCompatActivity {
     private void restartAll() {
         setLevel(1);
 
-        // <<< Additional
-        Scene.inventory = new Object[4];
+        FileOutputStream outputStream = null;
+        try {
+            outputStream = thisContext.openFileOutput(saveFile, Context.MODE_PRIVATE);
 
-        for (int x = 0; x < Scene.btn_invs.length; x++)
-            Scene.btn_invs[x].setImageResource(R.drawable.black);
+            String playerInfo = player.getName() + "&1&000" + '\n';
+            outputStream.write(playerInfo.getBytes());
 
-        flowers = new boolean[3];
+            outputStream.close();
 
-        // FIRST
-        firstSignsTurn = new boolean[_PUZZLES.firstSignsLength];
-
-        firstElectricity = false;
-        firstPipesAngle = new int[_PUZZLES.firstPipesSequence.length];
-
-        firstLamps = false;
-
-        firstClosetCleaned = false;
-        firstClosetTookCard = false;
-
-        firstTableTookAnti = false;
-        firstTableMedicineDone = false;
-
-        firstLevelComplete = false;
-
-        // SECOND
-        secondSibasDone = false;
-
-        secondsPassed = new boolean[3];
-
-        // THIRD
-        thirdCupsDone = false;
-
-        thirdLampsState = new boolean[_PUZZLES.thirdAdjacentLength];
-
-        thirdAdjacentDone = false;
-
-        thirdTeethDone = false;
-
-        thirdMazeState = new boolean[_PUZZLES.thirdMazeCorrectState.length];
-        thirdMazeDone = false;
-
-        thirdEnding = -1;
+        } catch (IOException ignored) {}
 
         Toast.makeText(getApplicationContext(), "Your progress has been deleted", Toast.LENGTH_LONG).show();
+    }
+
+    public static void playAudio(String audio) {
+        MediaPlayer music = MediaPlayer.create(thisContext, getResId(audio, R.raw.class));
+        music.start();
     }
 }

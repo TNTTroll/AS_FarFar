@@ -73,7 +73,7 @@ public class RoomFinal extends Fragment implements View.OnClickListener {
             if (resID == v.getId()) {
                 Holder hold = (Holder) view.findViewById(resID);
 
-                if (current_Item != -1) {
+                if (current_Item != -1 && inventory[current_Item] != null) {
                     boolean taken = hold.setItem(inventory[current_Item]);
 
                     if (taken) {
@@ -81,9 +81,10 @@ public class RoomFinal extends Fragment implements View.OnClickListener {
                         if ("thirdFlower".equals(hold.name)) {
                             current_Item = -1;
 
-                            hold.setIcon("flower_2");
+                            MainActivity.flowers[2] = 1;
+                            MainActivity.wateredFlowers += 1;
 
-                            MainActivity.flowers[2] = true;
+                            hold.setIcon("flower_" + MainActivity.wateredFlowers);
                         }
 
                     } else {
@@ -153,8 +154,8 @@ public class RoomFinal extends Fragment implements View.OnClickListener {
                 if (holder.used)
                     hold.setVisibility(View.GONE);
 
-                if (holder.name.trim().equals("thirdFlower") && MainActivity.flowers[2])
-                    hold.setIcon("flower_2");
+                if (holder.name.trim().equals("thirdFlower"))
+                    hold.setIcon("flower_" + MainActivity.wateredFlowers);
 
                 hold.setOnClickListener(this);
             }

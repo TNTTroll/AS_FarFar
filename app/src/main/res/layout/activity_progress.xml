@@ -6,12 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".Progress">
 
+    <ImageButton
+        android:id="@+id/progressBG"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#244573" />
+
     <TextView
         android:id="@+id/progressText"
-        android:layout_width="156dp"
-        android:layout_height="31dp"
+        android:layout_width="325dp"
+        android:layout_height="54dp"
         android:layout_marginTop="16dp"
+        android:gravity="center"
         android:text="Hello, ***"
+        android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/progressAchievements"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.499"
@@ -34,8 +42,8 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/progressBack"
-        android:layout_width="137dp"
-        android:layout_height="50dp"
+        android:layout_width="153dp"
+        android:layout_height="101dp"
         android:background="@drawable/back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

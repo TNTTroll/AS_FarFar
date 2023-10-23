@@ -93,11 +93,7 @@ public class ThirdTeeth extends Fragment implements View.OnClickListener {
         if (click == needPlates[progress]) {
             clickPlates[click - 1].setIcon("plate_2");
 
-            Log.d("PAIR", usedPlates.size() + " " + needPlates.length);
-
             if (usedPlates.size() == needPlates.length) {
-                Log.d("PAIR", "Done!");
-
                 MainActivity.thirdTeethDone = true;
 
                 for (Object obj : showPlates)

@@ -87,7 +87,7 @@ public class RoomOne extends Fragment implements View.OnClickListener {
             if (resID == v.getId()) {
                 Holder hold = (Holder) view.findViewById(resID);
 
-                if (current_Item != -1) {
+                if (current_Item != -1 && inventory[current_Item] != null) {
                     boolean taken = hold.setItem(inventory[current_Item]);
 
                     if (taken) {
@@ -118,9 +118,10 @@ public class RoomOne extends Fragment implements View.OnClickListener {
                             case "firstFlower":
                                 current_Item = -1;
 
-                                hold.setIcon("flower_2");
+                                MainActivity.flowers[0] = 1;
+                                MainActivity.wateredFlowers += 1;
 
-                                MainActivity.flowers[0] = true;
+                                hold.setIcon("flower_" + MainActivity.wateredFlowers);
 
                                 break;
 
@@ -214,8 +215,8 @@ public class RoomOne extends Fragment implements View.OnClickListener {
                 if (holder.used)
                     hold.setVisibility(View.GONE);
 
-                if (holder.name.trim().equals("firstFlower") && MainActivity.flowers[0])
-                    hold.setIcon("flower_2");
+                if (holder.name.trim().equals("firstFlower"))
+                    hold.setIcon("flower_" + MainActivity.wateredFlowers);
 
                 hold.setOnClickListener(this);
             }
@@ -237,7 +238,7 @@ public class RoomOne extends Fragment implements View.OnClickListener {
         }
 
         if (!MainActivity.firstLevelComplete)
-            door.setVisibility(View.GONE);
+           door.setVisibility(View.GONE);
 
         return view;
     }

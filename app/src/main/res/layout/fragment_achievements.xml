@@ -8,10 +8,12 @@
 
     <TextView
         android:id="@+id/achText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="237dp"
+        android:layout_height="29dp"
         android:layout_marginTop="36dp"
+        android:gravity="center"
         android:text="Achievements"
+        android:textSize="50px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -17,9 +17,11 @@
             android:name=".Progress"
             android:exported="false"
             android:label="@string/title_activity_progress"
+            android:screenOrientation="landscape"
             android:theme="@style/Theme.FarFarAway.NoActionBar" />
         <activity
             android:name=".Ending"
+            android:screenOrientation="landscape"
             android:exported="false" />
         <activity
             android:name=".Scene"

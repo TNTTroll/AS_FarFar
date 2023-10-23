@@ -91,23 +91,25 @@
 
     <com.example.far_faraway.Holder
         android:id="@+id/firstFlower"
-        android:layout_width="60dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="208dp"
-        android:layout_marginTop="248dp"
+        android:layout_width="115px"
+        android:layout_height="260px"
+        android:layout_marginStart="184dp"
         android:background="@drawable/flower_1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.636" />
 
     <com.example.far_faraway.Object
         android:id="@+id/watering"
-        android:layout_width="59dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/watering"
+        android:layout_width="310px"
+        android:layout_height="195px"
+        android:layout_marginStart="104dp"
+        android:background="@drawable/can"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.864" />
 
     <com.example.far_faraway.Object
         android:id="@+id/firstDoor"

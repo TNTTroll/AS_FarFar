@@ -1,7 +1,7 @@
 =scene
 -objects
-watering//watering
-firstDoor//pnc
+watering//can
+firstDoor//none
 
 -holders
 firstReader//firstCard//none

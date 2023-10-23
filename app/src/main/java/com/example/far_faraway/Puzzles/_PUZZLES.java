@@ -51,4 +51,7 @@ public class _PUZZLES {
     public static String[] thirdEndingBad = {"plate_3", "plate_3", "plate_3"};
     public static String[] thirdEndingNeutral = {"plate_3", "plate_2", "plate_1"};
     public static String[] thirdEndingGood = {"plate_1", "plate_2", "plate_3"};
+
+    // <<< LORE
+    public static String[] lore = {"Hello"};
 }

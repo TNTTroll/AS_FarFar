@@ -68,7 +68,7 @@ public class RoomTwo extends Fragment implements View.OnClickListener {
             if (resID == v.getId()) {
                 Holder hold = (Holder) view.findViewById(resID);
 
-                if (current_Item != -1) {
+                if (current_Item != -1 && inventory[current_Item] != null) {
                     boolean taken = hold.setItem(inventory[current_Item]);
 
                     if (taken) {
@@ -76,9 +76,10 @@ public class RoomTwo extends Fragment implements View.OnClickListener {
                         if ("secondFlower".equals(hold.name.trim())) {
                             current_Item = -1;
 
-                            hold.setIcon("flower_2");
+                            MainActivity.flowers[1] = 1;
+                            MainActivity.wateredFlowers += 1;
 
-                            MainActivity.flowers[1] = true;
+                            hold.setIcon("flower_" + MainActivity.wateredFlowers);
                         }
 
                     } else {
@@ -167,8 +168,8 @@ public class RoomTwo extends Fragment implements View.OnClickListener {
                 hold.setParam(holder.name, holder.need, holder.icon);
                 hold.setOnClickListener(this);
 
-                if (holder.name.trim().equals("secondFlower") && MainActivity.flowers[1])
-                    hold.setIcon("flower_2");
+                if (holder.name.trim().equals("secondFlower"))
+                    hold.setIcon("flower_" + MainActivity.wateredFlowers);
 
             }
             catch(NullPointerException ignored) {}
