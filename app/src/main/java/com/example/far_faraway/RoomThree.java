@@ -117,6 +117,8 @@ public class RoomThree extends Fragment implements View.OnClickListener {
 
         MainActivity.setLevel(3);
 
+        Scene.showText(2);
+
         pass1 = (Object) view.findViewById(R.id.thirdPass_1);
         pass2 = (Object) view.findViewById(R.id.thirdPass_2);
 

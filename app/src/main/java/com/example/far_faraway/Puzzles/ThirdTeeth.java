@@ -184,6 +184,9 @@ public class ThirdTeeth extends Fragment implements View.OnClickListener {
             obj.setIcon("plate_1");
             obj.setEnabled(true);
         }
+
+        if (!MainActivity.getAchievement(8))
+            MainActivity.setAchievement(8);
     }
 
     private void showNextPlate() {

@@ -96,6 +96,25 @@ public class FirstSigns extends Fragment implements View.OnClickListener {
                 }
             }
 
+        if (!MainActivity.getAchievement(4)) {
+            boolean flag = true;
+
+            boolean[] edible = {false, false, false, false,
+                                true, true, false, false,
+                                false, false, true, false,
+                                false, false, false, false };
+
+            for (int index = 0; index < signsCount; index++)
+                if (signsTurn[index] != edible[index]) {
+                    flag = false;
+                    break;
+                }
+
+            if (flag)
+                MainActivity.setAchievement(4);
+        }
+
+
     }
 
     @Override

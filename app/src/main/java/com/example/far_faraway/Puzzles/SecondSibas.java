@@ -8,6 +8,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
 import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,6 +40,10 @@ public class SecondSibas extends Fragment implements  View.OnClickListener {
 
     ArrayList<Integer> needPlates = new ArrayList<>();
     ArrayList<Integer> usedPlates = new ArrayList<>();
+
+    int clicked = 0;
+    ArrayList<Integer> cheat = new ArrayList<>();
+    int[] achievement = {1, 1, 4, 4, 2, 3, 2, 3};
 
     public SecondSibas() {
     }
@@ -72,6 +77,9 @@ public class SecondSibas extends Fragment implements  View.OnClickListener {
                 int currentPlate = Integer.parseInt("" + obj.getName().charAt(obj.getName().length() - 1)) - 1;
 
                 usedPlates.add(currentPlate);
+
+                if (!MainActivity.getAchievement(5))
+                    cheat.add(currentPlate + 1);
 
                 touched = currentPlate;
 
@@ -128,6 +136,22 @@ public class SecondSibas extends Fragment implements  View.OnClickListener {
             }, 500);
 
             handler.postDelayed(this::showPlates, 1000);
+        }
+
+        if (!MainActivity.getAchievement(5)) {
+            clicked += 1;
+
+            boolean get = true;
+
+            if (clicked >= achievement.length)
+                for (int x = 0; x < achievement.length; x++)
+                    if (achievement[x] != cheat.get(clicked - achievement.length + x)) {
+                        get = false;
+                        break;
+                    }
+
+            if (get && clicked >= achievement.length)
+                MainActivity.setAchievement(5);
         }
 
     }

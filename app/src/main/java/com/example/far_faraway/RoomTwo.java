@@ -137,6 +137,8 @@ public class RoomTwo extends Fragment implements View.OnClickListener {
 
         MainActivity.setLevel(2);
 
+        Scene.showText(1);
+
         for (ObjectInfo object : objects2) {
             try {
                 int resID = getResId(object.name, R.id.class);

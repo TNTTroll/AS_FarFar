@@ -1,6 +1,8 @@
 package com.example.far_faraway.Puzzles;
 
+import static com.example.far_faraway.Scene.current_Item;
 import static com.example.far_faraway.Scene.getResId;
+import static com.example.far_faraway.Scene.inventory;
 import static com.example.far_faraway.Scene.setPuzzleUsed;
 
 import android.graphics.Point;
@@ -86,6 +88,11 @@ public class FirstPipes extends Fragment implements View.OnClickListener {
 
                 pipe.setRotation((pipeAngle[index - 1] + 1) * 90);
                 pipeAngle[index - 1] = (pipeAngle[index - 1] + 1) % 4;
+
+                if (!MainActivity.getAchievement(3))
+                    if (current_Item != -1 && inventory[current_Item] != null)
+                        if (inventory[current_Item].getName().trim().equals("watering"))
+                            MainActivity.setAchievement(3);
 
                 break;
             }

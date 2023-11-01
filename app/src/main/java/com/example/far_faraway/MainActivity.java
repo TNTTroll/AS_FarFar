@@ -37,7 +37,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     // MainActivity.setLevel(lvl);
-    // MainActivity.setAchievement(_PUZZLES.achievements[index]);
+    // MainActivity.setAchievement(index);
     // MainActivity.playAudio("song");
     // Scene.showText(_PUZZLES.lore[index]);
 
@@ -49,26 +49,20 @@ public class MainActivity extends AppCompatActivity {
 
     public static MainActivity thisContext;
 
-    // <<< Scene 1
-    public static ArrayList<HolderInfo> holders1 = new ArrayList<>();
-    public static ArrayList<ObjectInfo> objects1 = new ArrayList<>();
-    public static ArrayList<PuzzleInfo> puzzles1 = new ArrayList<>();
+    public static Display display;
 
-    // <<< Scene 2
-    public static ArrayList<HolderInfo> holders2 = new ArrayList<>();
-    public static ArrayList<ObjectInfo> objects2 = new ArrayList<>();
-    public static ArrayList<PuzzleInfo> puzzles2 = new ArrayList<>();
-
-    // <<< Scene 3
-    public static ArrayList<HolderInfo> holders3 = new ArrayList<>();
-    public static ArrayList<ObjectInfo> objects3 = new ArrayList<>();
-    public static ArrayList<PuzzleInfo> puzzles3 = new ArrayList<>();
+    public static boolean[] loreSaw = new boolean[_PUZZLES.lore.length];
 
     // <<< Additional
     public static int wateredFlowers = 1;
     public static int[] flowers = new int[3];
+    public static boolean canTook = false;
 
-    // FIRST
+    // <<< FIRST
+    public static ArrayList<HolderInfo> holders1 = new ArrayList<>();
+    public static ArrayList<ObjectInfo> objects1 = new ArrayList<>();
+    public static ArrayList<PuzzleInfo> puzzles1 = new ArrayList<>();
+
     public static boolean[] firstSignsTurn = new boolean[_PUZZLES.firstSignsLength];
 
     public static boolean firstElectricity = false;
@@ -84,12 +78,20 @@ public class MainActivity extends AppCompatActivity {
 
     public static boolean firstLevelComplete = false;
 
-    // SECOND
+    // <<< SECOND
+    public static ArrayList<HolderInfo> holders2 = new ArrayList<>();
+    public static ArrayList<ObjectInfo> objects2 = new ArrayList<>();
+    public static ArrayList<PuzzleInfo> puzzles2 = new ArrayList<>();
+
     public static boolean secondSibasDone = false;
 
     public static boolean[] secondsPassed = new boolean[3];
 
-    // THIRD
+    // <<< THIRD
+    public static ArrayList<HolderInfo> holders3 = new ArrayList<>();
+    public static ArrayList<ObjectInfo> objects3 = new ArrayList<>();
+    public static ArrayList<PuzzleInfo> puzzles3 = new ArrayList<>();
+
     public static boolean thirdCupsDone = false;
 
     public static boolean[] thirdLampsState = new boolean[_PUZZLES.thirdAdjacentLength];
@@ -103,8 +105,6 @@ public class MainActivity extends AppCompatActivity {
 
     public static int thirdEnding = -1;
 
-
-    public static Display display;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -159,15 +159,17 @@ public class MainActivity extends AppCompatActivity {
             dialog_tutorial.show();
         });
 
+        Button sure = (Button) findViewById(R.id.menuBtnAccept);
+
         Button clear = (Button) findViewById(R.id.menuBtnClear);
         clear.setVisibility(View.GONE);
         clear.setOnClickListener(view -> {
             restartAll();
 
-            clear.setText("Done");
+            clear.setVisibility(View.GONE);
+            sure.setVisibility(View.VISIBLE);
         });
 
-        Button sure = (Button) findViewById(R.id.menuBtnAccept);
         sure.setOnClickListener(view -> {
             sure.setVisibility(View.GONE);
             clear.setVisibility(View.VISIBLE);
@@ -251,35 +253,25 @@ public class MainActivity extends AppCompatActivity {
         ImageButton no = (ImageButton) dialog_lvl.findViewById(R.id.lvlNo);
         no.setOnClickListener(v -> dialog_lvl.dismiss());
 
-        ImageButton lvl_1 = (ImageButton) dialog_lvl.findViewById(R.id.lvl_1);
-        lvl_1.setOnClickListener(v -> {
-            setLevel(1);
+        for (int index = 1; index <= 3; index++) {
+            int resId = getResId("lvl_" + index, R.id.class);
+            Object lvl = (Object) dialog_lvl.findViewById(resId);
 
-            Intent scene = new Intent(MainActivity.thisContext, Scene.class);
-            startActivity(scene);
+            int finalIndex = index;
+            lvl.setOnClickListener(v -> {
+                setLevel(finalIndex);
 
-            dialog_lvl.dismiss();
-        });
+                Intent scene = new Intent(MainActivity.thisContext, Scene.class);
+                startActivity(scene);
 
-        ImageButton lvl_2 = (ImageButton) dialog_lvl.findViewById(R.id.lvl_2);
-        lvl_2.setOnClickListener(v -> {
-            setLevel(2);
+                dialog_lvl.dismiss();
+            });
 
-            Intent scene = new Intent(MainActivity.thisContext, Scene.class);
-            startActivity(scene);
-
-            dialog_lvl.dismiss();
-        });
-
-        ImageButton lvl_3 = (ImageButton) dialog_lvl.findViewById(R.id.lvl_3);
-        lvl_3.setOnClickListener(v -> {
-            setLevel(3);
-
-            Intent scene = new Intent(MainActivity.thisContext, Scene.class);
-            startActivity(scene);
-
-            dialog_lvl.dismiss();
-        });
+            if (index > player.getLevel()) {
+                lvl.setIcon("no");
+                lvl.setEnabled(false);
+            }
+        }
 
         dialog_lvl.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog_lvl.show();
@@ -408,7 +400,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public static boolean getAchievement(String achieve) {
+    public static boolean getAchievement(int a) {
+
+        String achieve = _PUZZLES.achievements[a];
+
         List<String> playerAchievements = new ArrayList<String>();
 
         try {
@@ -432,7 +427,9 @@ public class MainActivity extends AppCompatActivity {
         return playerAchievements.contains(achieve.trim());
     }
 
-    public static void setAchievement(String achieve) {
+    public static void setAchievement(int a) {
+
+        String achieve = _PUZZLES.achievements[a];
 
         List<String> playerAchievements = new ArrayList<String>();
 
@@ -463,7 +460,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 assert outputStream != null;
 
-                Toast.makeText(thisContext.getApplicationContext(), "Achievement get: " + achieve, Toast.LENGTH_LONG).show();
+                Toast.makeText(thisContext.getApplicationContext(), "Achievement get: " + _PUZZLES.achievementsExplain[a], Toast.LENGTH_LONG).show();
 
                 achieve += '\n';
                 outputStream.write(achieve.getBytes());
@@ -477,6 +474,32 @@ public class MainActivity extends AppCompatActivity {
 
     private void restartAll() {
         setLevel(1);
+
+        loreSaw = new boolean[_PUZZLES.lore.length];
+        wateredFlowers = 1;
+        flowers = new int[3];
+        canTook = false;
+
+        firstSignsTurn = new boolean[_PUZZLES.firstSignsLength];
+        firstElectricity = false;
+        firstPipesAngle = new int[_PUZZLES.firstPipesSequence.length];
+        firstLamps = false;
+        firstClosetCleaned = false;
+        firstClosetTookCard = false;
+        firstTableTookAnti = false;
+        firstTableMedicineDone = false;
+        firstLevelComplete = false;
+
+        secondSibasDone = false;
+        secondsPassed = new boolean[3];
+
+        thirdCupsDone = false;
+        thirdLampsState = new boolean[_PUZZLES.thirdAdjacentLength];
+        thirdAdjacentDone = false;
+        thirdTeethDone = false;
+        thirdMazeState = new boolean[_PUZZLES.thirdMazeCorrectState.length];
+        thirdMazeDone = false;
+        thirdEnding = -1;
 
         FileOutputStream outputStream = null;
         try {

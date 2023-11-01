@@ -84,7 +84,10 @@ public class ThirdDoors extends Fragment implements View.OnClickListener {
             obj.setIcon("door_" + iconDoors[3*clicked + index - 1]);
         }
 
-        if (checkDoors(usedDoor)) {
+        if (usedDoor != needDoors[clicked]) {
+            if (!MainActivity.getAchievement(7))
+                MainActivity.setAchievement(7);
+
             getParentFragmentManager().beginTransaction().replace(R.id.roomView, new RoomThree()).addToBackStack(null).commit();
         }
 
@@ -117,9 +120,5 @@ public class ThirdDoors extends Fragment implements View.OnClickListener {
         }
 
         return view;
-    }
-
-    private boolean checkDoors(int usedDoor) {
-        return usedDoor != needDoors[clicked];
     }
 }

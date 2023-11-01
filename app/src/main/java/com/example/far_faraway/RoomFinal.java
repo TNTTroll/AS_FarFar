@@ -3,6 +3,7 @@ package com.example.far_faraway;
 import static com.example.far_faraway.MainActivity.holders3;
 import static com.example.far_faraway.MainActivity.objects3;
 import static com.example.far_faraway.MainActivity.puzzles3;
+import static com.example.far_faraway.MainActivity.setAchievement;
 import static com.example.far_faraway.Scene.current_Item;
 import static com.example.far_faraway.Scene.getResId;
 import static com.example.far_faraway.Scene.inventory;
@@ -18,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.far_faraway.Puzzles.ThirdAir;
+import com.example.far_faraway.Puzzles._PUZZLES;
 
 public class RoomFinal extends Fragment implements View.OnClickListener {
 
@@ -62,6 +64,9 @@ public class RoomFinal extends Fragment implements View.OnClickListener {
                 Toast.makeText(getActivity(), "NEUTRAL ENDING!", Toast.LENGTH_LONG).show();
             else
                 Toast.makeText(getActivity(), "GOOD ENDING!", Toast.LENGTH_LONG).show();
+
+            if (!MainActivity.getAchievement(MainActivity.thirdEnding - 1))
+                MainActivity.setAchievement(MainActivity.thirdEnding - 1);
 
             startActivity(new Intent(getActivity(), Ending.class));
         }

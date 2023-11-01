@@ -73,7 +73,11 @@ public class RoomOne extends Fragment implements View.OnClickListener {
 
                 if (obj.setToInventory()) {
                     obj.setVisibility(View.GONE);
-                    object.used = true;
+
+                    if (obj.name.trim().equals("watering"))
+                        MainActivity.canTook = true;
+                    else
+                        object.used = true;
                 }
 
                 break;
@@ -185,7 +189,7 @@ public class RoomOne extends Fragment implements View.OnClickListener {
 
         MainActivity.setLevel(1);
 
-        MainActivity.setAchievement(_PUZZLES.achievements[1]);
+        Scene.showText(0);
 
         for (ObjectInfo object : objects1) {
             try {
@@ -200,6 +204,9 @@ public class RoomOne extends Fragment implements View.OnClickListener {
 
                 if (object.name.trim().equals("firstDoor"))
                     door = obj;
+
+                else if (object.name.trim().equals("watering") && MainActivity.canTook)
+                    obj.setVisibility(View.GONE);
 
             }
             catch(NullPointerException ignored) {}

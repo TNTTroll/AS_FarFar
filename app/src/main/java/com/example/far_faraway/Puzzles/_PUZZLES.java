@@ -4,7 +4,25 @@ public class _PUZZLES {
     // <<< PLAYER
     public static int[] registrationAnswers = {12, 100, 10};
 
-    public static String[] achievements = {"first", "second", "third"};
+    public static String[] achievements = {"firstEnd",
+                                           "secondEnd",
+                                           "thirdEnd",
+                                           "electricity",
+                                           "cook",
+                                           "gamer",
+                                           "mushroom",
+                                           "door",
+                                           "teeth" };
+
+    public static String[] achievementsExplain = {"Bad ending",
+                                                  "Neutral ending",
+                                                  "Good ending",
+                                                  "Spill water on electricity",
+                                                  "I just wanted to eat",
+                                                  "I knew it!",
+                                                  "Somebody at home?",
+                                                  "I'll be back...",
+                                                  "It is your fault!" };
 
     // <<< FIRST
     public static int[] firstLightsSequence = {1, 3, 2, 1, 2};
@@ -53,5 +71,7 @@ public class _PUZZLES {
     public static String[] thirdEndingGood = {"plate_1", "plate_2", "plate_3"};
 
     // <<< LORE
-    public static String[] lore = {"Hello"};
+    public static String[] lore = {"Как я здесь очутился?",
+                                   "Мне кажется, я не должен быть здесь",
+                                   "Что за голос в моей голове?"};
 }

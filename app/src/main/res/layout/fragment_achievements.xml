@@ -19,39 +19,110 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.example.far_faraway.Object
-        android:id="@+id/ach_first"
-        android:layout_width="115dp"
-        android:layout_height="134dp"
+        android:id="@+id/ach_1"
+        android:layout_width="90dp"
+        android:layout_height="110dp"
         android:background="@drawable/pnc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintHorizontal_bias="0.23"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498" />
+        app:layout_constraintVertical_bias="0.305" />
 
     <com.example.far_faraway.Object
-        android:id="@+id/ach_third"
-        android:layout_width="115dp"
-        android:layout_height="134dp"
+        android:id="@+id/ach_2"
+        android:layout_width="90dp"
+        android:layout_height="110dp"
         android:background="@drawable/pnc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.813"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498" />
+        app:layout_constraintVertical_bias="0.305" />
 
     <com.example.far_faraway.Object
-        android:id="@+id/ach_second"
-        android:layout_width="115dp"
-        android:layout_height="134dp"
+        android:id="@+id/ach_3"
+        android:layout_width="90dp"
+        android:layout_height="110dp"
         android:background="@drawable/pnc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.76"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498" />
+        app:layout_constraintVertical_bias="0.305" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/ach_4"
+        android:layout_width="90dp"
+        android:layout_height="110dp"
+        android:background="@drawable/pnc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.741" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/ach_5"
+        android:layout_width="90dp"
+        android:layout_height="110dp"
+        android:background="@drawable/pnc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.741" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/ach_6"
+        android:layout_width="90dp"
+        android:layout_height="110dp"
+        android:background="@drawable/pnc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.406"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.741" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/ach_7"
+        android:layout_width="90dp"
+        android:layout_height="110dp"
+        android:background="@drawable/pnc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.741" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/ach_8"
+        android:layout_width="90dp"
+        android:layout_height="110dp"
+        android:background="@drawable/pnc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.741" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/ach_9"
+        android:layout_width="90dp"
+        android:layout_height="110dp"
+        android:background="@drawable/pnc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.927"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.741" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

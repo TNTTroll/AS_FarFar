@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Ending">
 
-    <ImageButton
+    <com.example.far_faraway.Object
         android:id="@+id/endBG"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

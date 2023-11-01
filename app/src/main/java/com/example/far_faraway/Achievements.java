@@ -54,12 +54,12 @@ public class Achievements extends Fragment implements View.OnClickListener {
 
         view = inflater.inflate(R.layout.fragment_achievements, container, false);
 
-        for (String achievement : _PUZZLES.achievements) {
-            Object obj = (Object) view.findViewById(getResId("ach_" + achievement, R.id.class));
+        for (int index = 1; index <= _PUZZLES.achievements.length; index++) {
+            Object obj = (Object) view.findViewById(getResId("ach_" + index, R.id.class));
 
-            obj.setParam(achievement, "ach_" + achievement);
+            obj.setParam(_PUZZLES.achievements[index - 1], "ach_" + index);
 
-            if (!MainActivity.getAchievement(obj.getName()))
+            if (!MainActivity.getAchievement(index - 1))
                 obj.setIcon("pnc");
 
         }

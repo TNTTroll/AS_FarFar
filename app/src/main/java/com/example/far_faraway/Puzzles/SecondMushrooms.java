@@ -37,6 +37,9 @@ public class SecondMushrooms extends Fragment implements View.OnClickListener {
     int[] usedShroom = new int[needShroom.length];
     Object[] shrooms = new Object[needShroom.length];
 
+    int counting = 0;
+    int achieve = -1;
+
     public SecondMushrooms() {
     }
 
@@ -87,6 +90,19 @@ public class SecondMushrooms extends Fragment implements View.OnClickListener {
 
                     redrawShrooms();
                 }
+
+                if (!MainActivity.getAchievement(6)) {
+                    if (currentShroom == achieve)
+                        counting += 1;
+                    else
+                        counting = 0;
+
+                    if (counting >= 4)
+                        MainActivity.setAchievement(6);
+
+                    achieve = currentShroom;
+                }
+
 
                 break;
             }

@@ -1,21 +1,14 @@
 package com.example.far_faraway;
 
-import static com.example.far_faraway.MainActivity.player;
-import static com.example.far_faraway.MainActivity.setLevel;
-import static com.example.far_faraway.Scene.getResId;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+
+import androidx.fragment.app.DialogFragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 
-import com.example.far_faraway.Object;
-import androidx.fragment.app.DialogFragment;
-
-public class Levels extends DialogFragment implements View.OnClickListener {
+public class Menu extends DialogFragment implements View.OnClickListener {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -25,11 +18,11 @@ public class Levels extends DialogFragment implements View.OnClickListener {
 
     View view;
 
-    public Levels() {
+    public Menu() {
     }
 
-    public static Levels newInstance(String param1, String param2) {
-        Levels fragment = new Levels();
+    public static Menu newInstance(String param1, String param2) {
+        Menu fragment = new Menu();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -47,13 +40,15 @@ public class Levels extends DialogFragment implements View.OnClickListener {
     }
 
     @Override
-    public void onClick(View v) {}
+    public void onClick(View v) {
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        view = inflater.inflate(R.layout.fragment_levels, container, false);
+        view = inflater.inflate(R.layout.fragment_menu, container, false);
 
         return view;
     }
