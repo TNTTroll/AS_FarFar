@@ -76,7 +76,7 @@ public class SecondDram extends Fragment implements  View.OnClickListener {
             for (Object obj : signs)
                 obj.setVisibility(View.GONE);
 
-            image.setVisibility(View.VISIBLE);
+            image.setIcon("dram_open");
         }
     }
 
@@ -96,7 +96,7 @@ public class SecondDram extends Fragment implements  View.OnClickListener {
                 int resID = getResId("secondDramSign_" + index, R.id.class);
                 Object obj = (Object) view.findViewById(resID);
 
-                obj.setParam("secondDramSign_" + index, "symbol_apple_1");
+                obj.setParam("secondDramSign_" + index, "none");
                 obj.setOnClickListener(this);
 
                 signs[index - 1] = obj;
@@ -105,7 +105,7 @@ public class SecondDram extends Fragment implements  View.OnClickListener {
         }
 
         if (!MainActivity.secondsPassed[2])
-            image.setVisibility(View.GONE);
+            image.setIcon("dram_close");
         else {
             for (Object obj : signs)
                 obj.setVisibility(View.GONE);

@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.far_faraway.Puzzles.ThirdAdjacent;
@@ -115,6 +116,9 @@ public class RoomThree extends Fragment implements View.OnClickListener {
 
         view = inflater.inflate(R.layout.fragment_room_three, container, false);
 
+        ImageButton bg = (ImageButton) view.findViewById(R.id.thirdBG);
+        bg.setEnabled(false);
+
         MainActivity.setLevel(3);
 
         Scene.showText(2);
@@ -123,10 +127,10 @@ public class RoomThree extends Fragment implements View.OnClickListener {
         pass2 = (Object) view.findViewById(R.id.thirdPass_2);
 
         if (MainActivity.thirdMazeDone)
-            pass1.setIcon("pass_2");
+            pass1.setIcon("none");
 
         if (MainActivity.thirdTeethDone)
-            pass2.setIcon("pass_2");
+            pass2.setIcon("none");
 
         int doorCount = 0;
         for (ObjectInfo object : objects3) {

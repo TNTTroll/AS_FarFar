@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.example.far_faraway.MainActivity;
 import com.example.far_faraway.Object;
@@ -91,16 +92,16 @@ public class ThirdTeeth extends Fragment implements View.OnClickListener {
         }
 
         if (click == needPlates[progress]) {
-            clickPlates[click - 1].setIcon("plate_2");
+            clickPlates[click - 1].setIcon("button_universal");
 
             if (usedPlates.size() == needPlates.length) {
                 MainActivity.thirdTeethDone = true;
 
                 for (Object obj : showPlates)
-                    obj.setIcon("plate_2");
+                    obj.setIcon("button_universal");
 
                 for (Object obj : clickPlates) {
-                    obj.setIcon("plate_2");
+                    obj.setIcon("button_universal");
                     obj.setEnabled(false);
                 }
 
@@ -117,6 +118,9 @@ public class ThirdTeeth extends Fragment implements View.OnClickListener {
 
         view = inflater.inflate(R.layout.fragment_third_teeth, container, false);
 
+        ImageButton bg = (ImageButton) view.findViewById(R.id.thirdTeethBG);
+        bg.setEnabled(false);
+
         back = (Object) view.findViewById(R.id.thirdTeethBack);
         back.setOnClickListener(this);
 
@@ -126,14 +130,14 @@ public class ThirdTeeth extends Fragment implements View.OnClickListener {
         for (int index = 1; index <= platesCount; index++) {
             Object plate = (Object) view.findViewById(getResId("thirdTeethClick_" + index, R.id.class));
 
-            plate.setParam("thirdTeethClick_" + index, "plate_1");
+            plate.setParam("thirdTeethClick_" + index, "none");
 
             plate.setOnClickListener(this);
 
             clickPlates[index - 1] = plate;
 
             if (MainActivity.thirdTeethDone) {
-                plate.setIcon("plate_2");
+                plate.setIcon("button_universal");
                 plate.setEnabled(false);
             }
 
@@ -143,14 +147,14 @@ public class ThirdTeeth extends Fragment implements View.OnClickListener {
         for (int index = 1; index <= platesCount; index++) {
             Object plate = (Object) view.findViewById(getResId("thirdTeethShow_" + index, R.id.class));
 
-            plate.setParam("thirdTeethShow_" + index, "plate_1");
+            plate.setParam("thirdTeethShow_" + index, "none");
 
             plate.setOnClickListener(this);
 
             showPlates[index - 1] = plate;
 
             if (MainActivity.thirdTeethDone) {
-                plate.setIcon("plate_2");
+                plate.setIcon("button_universal");
                 plate.setEnabled(false);
             }
 
@@ -165,8 +169,8 @@ public class ThirdTeeth extends Fragment implements View.OnClickListener {
         Point size = new Point();
         MainActivity.display.getSize(size);
 
-        double width = size.x * 0.3;
-        double height = size.y * 0.18;
+        double width = size.x * 0.095;
+        double height = size.y * 0.143;
 
         obj.setX( (int) width );
         obj.setY( (int) height );
@@ -178,10 +182,10 @@ public class ThirdTeeth extends Fragment implements View.OnClickListener {
         usedPlates.clear();
 
         for (Object obj : showPlates)
-            obj.setIcon("plate_1");
+            obj.setIcon("none");
 
         for (Object obj : clickPlates) {
-            obj.setIcon("plate_1");
+            obj.setIcon("none");
             obj.setEnabled(true);
         }
 
@@ -192,7 +196,7 @@ public class ThirdTeeth extends Fragment implements View.OnClickListener {
     private void showNextPlate() {
         Object nextPlate = showPlates[needShowPlates[progress] - 1];
 
-        nextPlate.setIcon("plate_2");
+        nextPlate.setIcon("button_universal");
 
         progress += 1;
     }

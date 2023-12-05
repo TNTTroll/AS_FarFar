@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.example.far_faraway.MainActivity;
 import com.example.far_faraway.Object;
@@ -27,6 +28,7 @@ public class SecondMushrooms extends Fragment implements View.OnClickListener {
     View view;
 
     Object back;
+    ImageButton text;
 
     int activeShroom = -1;
 
@@ -114,7 +116,7 @@ public class SecondMushrooms extends Fragment implements View.OnClickListener {
             for (Object shroom : shrooms)
                 shroom.setEnabled(false);
 
-            setPuzzleUsed("SecondMushrooms", 2);
+            text.setVisibility(View.VISIBLE);
         }
     }
 
@@ -127,6 +129,12 @@ public class SecondMushrooms extends Fragment implements View.OnClickListener {
         back = (Object) view.findViewById(R.id.secondMushroomsBack);
         back.setOnClickListener(this);
 
+        text = (ImageButton) view.findViewById(R.id.secondMushroomsText);
+        text.setEnabled(false);
+
+        if (!MainActivity.secondsPassed[0])
+            text.setVisibility(View.GONE);
+
         int shroomPos = 0;
         for (int index = 1; index <= 4; index++) {
             try {
@@ -134,7 +142,8 @@ public class SecondMushrooms extends Fragment implements View.OnClickListener {
                 Object obj = (Object) view.findViewById(resID);
 
                 obj.setParam("secondMushroomsMorel_" + index, "mushroom_" + (index-1));
-                obj.setOnClickListener(this);
+                if (!MainActivity.secondsPassed[0])
+                    obj.setOnClickListener(this);
 
                 shrooms[shroomPos] = obj;
 

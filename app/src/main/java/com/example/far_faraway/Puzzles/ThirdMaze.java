@@ -30,7 +30,7 @@ public class ThirdMaze extends Fragment implements View.OnClickListener {
 
     View view;
 
-    Object back;
+    Object back, bg;
 
     boolean[] platesCorrect = _PUZZLES.thirdMazeCorrectState;
     int platesCount = platesCorrect.length;
@@ -72,9 +72,9 @@ public class ThirdMaze extends Fragment implements View.OnClickListener {
                 Object plate = (Object) view.findViewById(resID);
 
                 if (platesState[index - 1])
-                    plate.setIcon("plate_1");
+                    plate.setIcon("none");
                 else
-                    plate.setIcon("plate_2");
+                    plate.setIcon("button_universal");
 
                 platesState[index - 1] = !platesState[index - 1];
 
@@ -87,10 +87,10 @@ public class ThirdMaze extends Fragment implements View.OnClickListener {
 
             for (int index = 1; index <= platesCount; index++) {
                 Object plate = (Object) view.findViewById(getResId("thirdMaze_" + index, R.id.class));
-                plate.setEnabled(false);
+                plate.setVisibility(View.GONE);
             }
 
-            setPuzzleUsed("ThirdMaze", 3);
+            bg.setIcon("bg_maze_2");
         }
     }
 
@@ -100,8 +100,14 @@ public class ThirdMaze extends Fragment implements View.OnClickListener {
 
         view = inflater.inflate(R.layout.fragment_third_maze, container, false);
 
+        bg = (Object) view.findViewById(R.id.thirdMazeBG);
+        bg.setEnabled(false);
+
         back = (Object) view.findViewById(R.id.thirdMazeBack);
         back.setOnClickListener(this);
+
+        if (MainActivity.thirdMazeDone)
+            bg.setIcon("bg_maze_2");
 
         platesState = MainActivity.thirdMazeState;
 
@@ -109,11 +115,14 @@ public class ThirdMaze extends Fragment implements View.OnClickListener {
             Object plate = (Object) view.findViewById(getResId("thirdMaze_" + index, R.id.class));
 
             if (!platesState[index - 1])
-                plate.setParam("thirdMaze_" + index, "plate_1");
+                plate.setParam("thirdMaze_" + index, "none");
             else
-                plate.setParam("thirdMaze_" + index, "plate_2");
+                plate.setParam("thirdMaze_" + index, "button_universal");
 
             plate.setOnClickListener(this);
+
+            if (MainActivity.thirdMazeDone)
+                plate.setVisibility(View.GONE);
 
             setPosition(plate);
         }
@@ -126,8 +135,8 @@ public class ThirdMaze extends Fragment implements View.OnClickListener {
         Point size = new Point();
         MainActivity.display.getSize(size);
 
-        double width = size.x * 0.333;
-        double height = size.y * 0.18;
+        double width = size.x * 0.1;
+        double height = size.y * 0.05;
 
         obj.setX( (int) width );
         obj.setY( (int) height );

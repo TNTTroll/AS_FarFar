@@ -27,8 +27,7 @@ public class ThirdAdjacent extends Fragment implements View.OnClickListener {
 
     View view;
 
-    ImageButton image;
-    Object back;
+    Object back, bg;
 
     int lampsCount = _PUZZLES.thirdAdjacentLength;
     boolean[] lampsState = new boolean[lampsCount];
@@ -76,10 +75,11 @@ public class ThirdAdjacent extends Fragment implements View.OnClickListener {
 
             for (int index = 1; index <= lampsCount; index++) {
                 Object lamp = (Object) view.findViewById(getResId("thirdAdjacent_" + index, R.id.class));
-                lamp.setVisibility(View.GONE);
+                lamp.setEnabled(false);
+                lamp.setIcon("none");
             }
 
-            image.setVisibility(View.VISIBLE);
+            bg.setIcon("bg_adjacent_2");
         }
     }
 
@@ -92,11 +92,11 @@ public class ThirdAdjacent extends Fragment implements View.OnClickListener {
         back = (Object) view.findViewById(R.id.thirdAdjacentBack);
         back.setOnClickListener(this);
 
-        image = (ImageButton) view.findViewById(R.id.thirdAdjacentImage);
-        image.setEnabled(false);
+        bg = (Object) view.findViewById(R.id.thirdAdjacentBG);
+        bg.setEnabled(false);
 
-        if (!MainActivity.thirdAdjacentDone)
-            image.setVisibility(View.GONE);
+        if (MainActivity.thirdAdjacentDone)
+            bg.setIcon("bg_adjacent_2");
 
         lampsState = MainActivity.thirdLampsState;
 
@@ -104,14 +104,16 @@ public class ThirdAdjacent extends Fragment implements View.OnClickListener {
             Object lamp = (Object) view.findViewById(getResId("thirdAdjacent_" + index, R.id.class));
 
             if (!lampsState[index - 1])
-                lamp.setParam("thirdAdjacent_" + index, "lamp_off");
+                lamp.setParam("thirdAdjacent_" + index, "none");
             else
-                lamp.setParam("thirdAdjacent_" + index, "lamp_on");
+                lamp.setParam("thirdAdjacent_" + index, "button_universal");
 
             lamp.setOnClickListener(this);
 
-            if (MainActivity.thirdAdjacentDone)
-                lamp.setVisibility(View.GONE);
+            if (MainActivity.thirdAdjacentDone) {
+                lamp.setEnabled(false);
+                lamp.setIcon("none");
+            }
 
             setPosition(lamp);
         }
@@ -132,8 +134,8 @@ public class ThirdAdjacent extends Fragment implements View.OnClickListener {
         Point size = new Point();
         MainActivity.display.getSize(size);
 
-        double width = size.x * 0.433;
-        double height = size.y * 0.2;
+        double width = size.x * 0.21;
+        double height = size.y * 0.05;
 
         obj.setX( (int) width );
         obj.setY( (int) height );
@@ -165,9 +167,9 @@ public class ThirdAdjacent extends Fragment implements View.OnClickListener {
             Object lamp = (Object) view.findViewById(getResId("thirdAdjacent_" + x, R.id.class));
 
             if (!lampsState[x - 1])
-                lamp.setIcon("lamp_off");
+                lamp.setIcon("none");
             else
-                lamp.setIcon("lamp_on");
+                lamp.setIcon("button_universal");
         }
 
     }

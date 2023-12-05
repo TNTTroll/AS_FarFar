@@ -25,17 +25,17 @@ secondDoor//door
 secondFlower//watering//flower_1
 
 -puzzles
-secondMushrooms//SecondMushrooms//pnc
-secondSibas//SecondSibas//pnc
-secondWires//SecondWires//pnc
-secondNotes//SecondNotes//pnc
-secondDram//SecondDram//pnc
+secondMushrooms//SecondMushrooms//none
+secondSibas//SecondSibas//none
+secondWires//SecondWires//none
+secondNotes//SecondNotes//none
+secondDram//SecondDram//none
 
 =scene
 -objects
-thirdDoor_1//door
-thirdDoor_2//door
-thirdDoor_3//door
+thirdDoor_1//door_open
+thirdDoor_2//door_open
+thirdDoor_3//door_open
 
 thirdCorridor_1//door_1
 thirdCorridor_2//door_2
@@ -47,9 +47,9 @@ thirdExit//door
 thirdFlower//watering//flower_1
 
 -puzzles
-thirdCups//ThirdCups//pnc
-thirdАdjacent//ThirdАdjacent//pnc
-thirdTeeth//ThirdTeeth//pnc
-thirdMaze//ThirdMaze//pnc
+thirdCups//ThirdCups//none
+thirdАdjacent//ThirdАdjacent//none
+thirdTeeth//ThirdTeeth//none
+thirdMaze//ThirdMaze//none
 
 thirdAir//ThirdAir//pnc

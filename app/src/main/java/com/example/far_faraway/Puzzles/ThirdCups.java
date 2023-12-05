@@ -27,8 +27,7 @@ public class ThirdCups extends Fragment implements View.OnClickListener {
 
     View view;
 
-    ImageButton image;
-    Object back, check;
+    Object back, check, bg;
 
     String[] needLever = _PUZZLES.thirdCupsSequence;
     Object[] levers = new Object[3];
@@ -72,7 +71,7 @@ public class ThirdCups extends Fragment implements View.OnClickListener {
                         for (Object lever : levers)
                             lever.setVisibility(View.GONE);
 
-                        image.setVisibility(View.VISIBLE);
+                        bg.setIcon("bg_levers_2");
                     }
 
                 break;
@@ -106,11 +105,11 @@ public class ThirdCups extends Fragment implements View.OnClickListener {
         back = (Object) view.findViewById(R.id.thirdCupsBack);
         back.setOnClickListener(this);
 
-        image = (ImageButton) view.findViewById(R.id.thirdCupsImage);
-        image.setEnabled(false);
+        bg = (Object) view.findViewById(R.id.thirdCupsBG);
+        bg.setEnabled(false);
 
-        if (!MainActivity.thirdCupsDone)
-            image.setVisibility(View.GONE);
+        if (MainActivity.thirdCupsDone)
+            bg.setIcon("bg_levers_2");
 
         check = (Object) view.findViewById(R.id.thirdCupsCheck);
         check.setOnClickListener(this);

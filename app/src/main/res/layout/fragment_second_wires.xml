@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".Puzzles.SecondWires">
 
+    <ImageButton
+        android:id="@+id/secondWiresBG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_wires"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <com.example.far_faraway.Object
         android:id="@+id/secondWiresBack"
         android:layout_width="50dp"
@@ -17,67 +29,51 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/secondWiresAnswer"
-        android:layout_width="322dp"
-        android:layout_height="67dp"
-        android:background="@drawable/table_flask_1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.471"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.02" />
-
     <com.example.far_faraway.Object
         android:id="@+id/secondWiresBtn1"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="92dp"
-        android:background="@drawable/black"
+        android:layout_marginEnd="24dp"
         android:contentDescription="@string/app_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/secondWiresBtn2"
+        app:layout_constraintTop_toTopOf="@+id/secondWiresBtn2" />
 
     <com.example.far_faraway.Object
         android:id="@+id/secondWiresBtn2"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="308dp"
-        android:layout_marginTop="92dp"
-        android:background="@drawable/black"
         android:contentDescription="@string/app_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/secondWiresBG"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="@+id/secondWiresBG"
+        app:layout_constraintTop_toBottomOf="@+id/secondWiresImage"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.example.far_faraway.Object
         android:id="@+id/secondWiresBtn3"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="556dp"
-        android:layout_marginTop="92dp"
-        android:background="@drawable/black"
+        android:layout_marginStart="24dp"
         android:contentDescription="@string/app_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/secondWiresBtn2"
+        app:layout_constraintTop_toTopOf="@+id/secondWiresBtn2" />
 
     <com.example.far_faraway.Object
         android:id="@+id/secondWiresImage"
-        android:layout_width="697dp"
-        android:layout_height="208dp"
+        android:layout_width="1263px"
+        android:layout_height="721px"
         android:background="@drawable/wires_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.92" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

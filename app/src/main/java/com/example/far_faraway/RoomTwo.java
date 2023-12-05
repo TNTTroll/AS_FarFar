@@ -150,12 +150,16 @@ public class RoomTwo extends Fragment implements View.OnClickListener {
                 } else
                     obj.setVisibility(View.GONE);
 
-                if (object.name.trim().equals("secondDoor"))
+                if (object.name.trim().equals("secondDoor")) {
                     door = obj;
+                    door.setIcon("door_open");
+                }
 
                 else if (object.name.trim().startsWith("secondPassed_")) {
                     if ( MainActivity.secondsPassed[ Integer.parseInt("" + obj.getName().charAt(obj.getName().length() - 1)) ] )
-                        obj.setIcon("pass_2");
+                        obj.setIcon("pass_1");
+                    else
+                        obj.setIcon("none");
                 }
 
             }

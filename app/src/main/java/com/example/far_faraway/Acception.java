@@ -1,6 +1,7 @@
 package com.example.far_faraway;
 
 import static com.example.far_faraway.MainActivity.player;
+import static com.example.far_faraway.Scene.indicator;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -52,10 +53,12 @@ public class Acception extends DialogFragment implements View.OnClickListener {
             switch (player.getLevel()) {
                 case 1:
                     getParentFragmentManager().beginTransaction().replace(R.id.roomView, new RoomTwo()).commit();
+                    indicator.setIcon("bg_indicator_2");
                     break;
 
                 case 2:
                     getParentFragmentManager().beginTransaction().replace(R.id.roomView, new RoomThree()).commit();
+                    indicator.setIcon("bg_indicator_3");
                     break;
             }
 

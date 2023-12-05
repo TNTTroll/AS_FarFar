@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".Puzzles.ThirdTeeth">
 
+    <ImageButton
+        android:id="@+id/thirdTeethBG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_tooth"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <com.example.far_faraway.Object
         android:id="@+id/thirdTeethBack"
         android:layout_width="50dp"
@@ -19,21 +31,23 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/thirdTeethRestart"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="94dp"
+        android:layout_height="68dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="312dp"
-        android:layout_marginTop="356dp"
-        android:background="@drawable/restart"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/back"
         android:contentDescription="@string/app_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:rotation="-90"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.example.far_faraway.Object
         android:id="@+id/thirdTeethClick_1"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/plate_1"
@@ -43,8 +57,8 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/thirdTeethClick_2"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/plate_1"
@@ -54,8 +68,8 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/thirdTeethClick_3"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/plate_1"
@@ -65,8 +79,8 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/thirdTeethClick_4"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/plate_1"
@@ -76,8 +90,8 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/thirdTeethClick_5"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/plate_1"
@@ -87,8 +101,8 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/thirdTeethClick_6"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/plate_1"
@@ -98,8 +112,8 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/thirdTeethClick_7"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/plate_1"
@@ -109,8 +123,8 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/thirdTeethClick_8"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/plate_1"
@@ -120,8 +134,8 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/thirdTeethClick_9"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/plate_1"
@@ -131,11 +145,11 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/thirdTeethShow_1"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="28dp"
         android:background="@drawable/plate_1"
         android:contentDescription="@string/app_name"
         app:layout_constraintStart_toEndOf="@+id/thirdTeethClick_3"
@@ -143,8 +157,8 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/thirdTeethShow_2"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/plate_1"
@@ -154,8 +168,8 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/thirdTeethShow_3"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/plate_1"
@@ -165,8 +179,8 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/thirdTeethShow_4"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/plate_1"
@@ -176,8 +190,8 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/thirdTeethShow_5"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/plate_1"
@@ -187,8 +201,8 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/thirdTeethShow_6"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/plate_1"
@@ -198,8 +212,8 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/thirdTeethShow_7"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/plate_1"
@@ -209,8 +223,8 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/thirdTeethShow_8"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/plate_1"
@@ -220,8 +234,8 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/thirdTeethShow_9"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/plate_1"

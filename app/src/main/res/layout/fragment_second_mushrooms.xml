@@ -6,6 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".Puzzles.SecondMushrooms">
 
+    <ImageButton
+        android:id="@+id/secondMushroomsBG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_mushrooms"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/secondMushroomsText"
+        android:layout_width="1920px"
+        android:layout_height="160px"
+        android:background="@drawable/mushroom_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <com.example.far_faraway.Object
         android:id="@+id/secondMushroomsBack"
         android:layout_width="50dp"
@@ -19,32 +43,32 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/secondMushroomsMorel_1"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="290px"
+        android:layout_height="165px"
         android:background="@drawable/mushroom_0"
         android:contentDescription="@string/app_name"
         tools:ignore="MissingConstraints" />
 
     <com.example.far_faraway.Object
         android:id="@+id/secondMushroomsMorel_2"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="290px"
+        android:layout_height="165px"
         android:background="@drawable/mushroom_1"
         android:contentDescription="@string/app_name"
         tools:ignore="MissingConstraints" />
 
     <com.example.far_faraway.Object
         android:id="@+id/secondMushroomsMorel_3"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="290px"
+        android:layout_height="165px"
         android:background="@drawable/mushroom_2"
         android:contentDescription="@string/app_name"
         tools:ignore="MissingConstraints" />
 
     <com.example.far_faraway.Object
         android:id="@+id/secondMushroomsMorel_4"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="290px"
+        android:layout_height="165px"
         android:background="@drawable/mushroom_3"
         android:contentDescription="@string/app_name"
         tools:ignore="MissingConstraints" />

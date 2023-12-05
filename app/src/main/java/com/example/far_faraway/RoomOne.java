@@ -202,8 +202,10 @@ public class RoomOne extends Fragment implements View.OnClickListener {
                 } else
                     obj.setVisibility(View.GONE);
 
-                if (object.name.trim().equals("firstDoor"))
+                if (object.name.trim().equals("firstDoor")) {
                     door = obj;
+                    door.setIcon("door_open");
+                }
 
                 else if (object.name.trim().equals("watering") && MainActivity.canTook)
                     obj.setVisibility(View.GONE);

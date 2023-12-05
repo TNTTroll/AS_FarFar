@@ -7,6 +7,17 @@
     tools:context=".Puzzles.ThirdCups">
 
     <com.example.far_faraway.Object
+        android:id="@+id/thirdCupsBG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_levers_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.far_faraway.Object
         android:id="@+id/thirdCupsBack"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -23,10 +34,11 @@
         android:layout_height="93dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="316dp"
-        android:layout_marginTop="300dp"
-        android:background="@drawable/door"
+        android:layout_marginStart="28dp"
+        android:background="@drawable/back"
         android:contentDescription="@string/app_name"
+        android:rotation="-90"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,17 +78,6 @@
         android:layout_marginTop="104dp"
         android:background="@drawable/lever_1"
         android:contentDescription="@string/app_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/thirdCupsImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/pnc"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

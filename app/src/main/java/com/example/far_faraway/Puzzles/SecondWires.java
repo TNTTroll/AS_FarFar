@@ -78,12 +78,15 @@ public class SecondWires extends Fragment implements View.OnClickListener {
 
         btn1 = (Object) view.findViewById(R.id.secondWiresBtn1);
         btn1.setOnClickListener(this);
+        btn1.setIcon("none");
 
         btn2 = (Object) view.findViewById(R.id.secondWiresBtn2);
         btn2.setOnClickListener(this);
+        btn2.setIcon("none");
 
         btn3 = (Object) view.findViewById(R.id.secondWiresBtn3);
         btn3.setOnClickListener(this);
+        btn3.setIcon("none");
 
         image = (Object) view.findViewById(R.id.secondWiresImage);
         image.setEnabled(false);

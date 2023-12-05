@@ -7,68 +7,76 @@
     android:layout_height="match_parent"
     tools:context=".RoomThree">
 
-
-    <com.example.far_faraway.Object
-        android:id="@+id/thirdPass_1"
-        android:layout_width="52dp"
-        android:layout_height="51dp"
-        android:background="@drawable/pass_1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.736"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
-
-    <com.example.far_faraway.Object
-        android:id="@+id/thirdPass_2"
-        android:layout_width="52dp"
-        android:layout_height="51dp"
-        android:background="@drawable/pass_1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.827"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
-
-    <com.example.far_faraway.Puzzle
-        android:id="@+id/thirdCups"
-        android:layout_width="133dp"
-        android:layout_height="200dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.005"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.412" />
-
-    <com.example.far_faraway.Puzzle
-        android:id="@+id/thirdАdjacent"
-        android:layout_width="133dp"
-        android:layout_height="200dp"
+    <ImageButton
+        android:id="@+id/thirdBG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_main_third"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.412" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdPass_1"
+        android:layout_width="1161px"
+        android:layout_height="106px"
+        android:background="@drawable/laser"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.307" />
+
+    <com.example.far_faraway.Object
+        android:id="@+id/thirdPass_2"
+        android:layout_width="1161px"
+        android:layout_height="106px"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/laser"
+        app:layout_constraintStart_toStartOf="@+id/thirdPass_1"
+        app:layout_constraintTop_toBottomOf="@+id/thirdPass_1" />
+
+    <com.example.far_faraway.Puzzle
+        android:id="@+id/thirdCups"
+        android:layout_width="154dp"
+        android:layout_height="224dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.026"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.236" />
+
+    <com.example.far_faraway.Puzzle
+        android:id="@+id/thirdАdjacent"
+        android:layout_width="185dp"
+        android:layout_height="231dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.165" />
 
     <com.example.far_faraway.Puzzle
         android:id="@+id/thirdTeeth"
-        android:layout_width="242dp"
+        android:layout_width="407dp"
         android:layout_height="74dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <com.example.far_faraway.Puzzle
         android:id="@+id/thirdMaze"
-        android:layout_width="321dp"
-        android:layout_height="139dp"
+        android:layout_width="491dp"
+        android:layout_height="134dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,34 +85,29 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/thirdDoor_1"
-        android:layout_width="105dp"
-        android:layout_height="172dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.306"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.418" />
+        android:layout_width="304px"
+        android:layout_height="405px"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintEnd_toStartOf="@+id/thirdDoor_2"
+        app:layout_constraintTop_toTopOf="@+id/thirdDoor_2" />
 
     <com.example.far_faraway.Object
         android:id="@+id/thirdDoor_2"
-        android:layout_width="105dp"
-        android:layout_height="172dp"
+        android:layout_width="304px"
+        android:layout_height="405px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.418" />
+        app:layout_constraintVertical_bias="0.335" />
 
     <com.example.far_faraway.Object
         android:id="@+id/thirdDoor_3"
-        android:layout_width="105dp"
-        android:layout_height="172dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.69"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.418" />
+        android:layout_width="304px"
+        android:layout_height="405px"
+        android:layout_marginStart="28dp"
+        app:layout_constraintStart_toEndOf="@+id/thirdDoor_2"
+        app:layout_constraintTop_toTopOf="@+id/thirdDoor_2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

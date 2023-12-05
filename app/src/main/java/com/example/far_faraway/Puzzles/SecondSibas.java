@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.example.far_faraway.MainActivity;
 import com.example.far_faraway.Object;
@@ -132,7 +133,7 @@ public class SecondSibas extends Fragment implements  View.OnClickListener {
 
             handler.postDelayed(() -> {
                 for (Object obj : plates)
-                    obj.setIcon("sibas_color_0");
+                    obj.setIcon("none");
             }, 500);
 
             handler.postDelayed(this::showPlates, 1000);
@@ -162,6 +163,9 @@ public class SecondSibas extends Fragment implements  View.OnClickListener {
 
         view = inflater.inflate(R.layout.fragment_second_sibas, container, false);
 
+        ImageButton bg = (ImageButton) view.findViewById(R.id.secondSibasBG);
+        bg.setEnabled(false);
+
         back = (Object) view.findViewById(R.id.secondSibasBack);
         back.setOnClickListener(this);
 
@@ -170,7 +174,7 @@ public class SecondSibas extends Fragment implements  View.OnClickListener {
                 int resID = getResId("secondSibasBtn_" + index, R.id.class);
                 Object obj = (Object) view.findViewById(resID);
 
-                obj.setParam("secondSibasBtn_" + index, "sibas_color_0" );
+                obj.setParam("secondSibasBtn_" + index, "none" );
                 obj.setOnClickListener(this);
 
                 plates[index - 1] = obj;
@@ -190,7 +194,7 @@ public class SecondSibas extends Fragment implements  View.OnClickListener {
 
         obj.setIcon( "sibas_color_" + ("" + obj.getName().charAt(obj.getName().length() - 1)));
 
-        handler.postDelayed(() -> obj.setIcon( "sibas_color_0" ), wait);
+        handler.postDelayed(() -> obj.setIcon( "none" ), wait);
     }
 
     private void showPlates() {
@@ -201,7 +205,7 @@ public class SecondSibas extends Fragment implements  View.OnClickListener {
             Object obj = plates[ needPlates.get(index) ];
 
             handler.postDelayed(() -> obj.setIcon( "sibas_color_" + ("" + obj.getName().charAt(obj.getName().length() - 1)) ), (index * 2L + 1) * 1000);
-            handler.postDelayed(() -> obj.setIcon( "sibas_color_0" ), (index * 2L + 2) * 1000);
+            handler.postDelayed(() -> obj.setIcon( "none" ), (index * 2L + 2) * 1000);
         }
 
         handler.postDelayed(() -> {

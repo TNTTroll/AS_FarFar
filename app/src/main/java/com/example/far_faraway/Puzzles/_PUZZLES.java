@@ -42,10 +42,10 @@ public class _PUZZLES {
 
     // <<< SECOND
     public static int[] secondMushroomsSequence = {1, 2, 4, 3};
-    public static int[] secondMushroomsPosX = {300, 400};
-    public static int secondMushroomsPosY = 300;
+    public static int[] secondMushroomsPosX = {150, 470};
+    public static int secondMushroomsPosY = 790;
 
-    public static int secondSibasLength = 3;
+    public static int secondSibasLength = 5;
 
     public static int[] secondDramsSequence = {0, 4, 1, 2};
 
@@ -57,11 +57,10 @@ public class _PUZZLES {
     public static int[] thirdTeethClickSequence = {9, 8, 7, 6, 5, 4, 3, 2, 1};
     public static int[] thirdTeethShowSequence = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-    public static boolean[] thirdMazeCorrectState = {true, false, false, false, false,
-                                                     false, true, false, false, false,
-                                                     false, false, true, false, false,
-                                                     false, false, false, true, false,
-                                                     false, false, false, false, true };
+    public static boolean[] thirdMazeCorrectState = {true, false, false, false, false, false,
+                                                     false, true, false, false, false, false,
+                                                     false, false, true, false, false, false,
+                                                     false, false, false, true, false, false };
 
     public static int[] thirdDoorsSequence = {1, 2, 3, 2, 3};
 

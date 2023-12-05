@@ -6,26 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".RoomTwo">
 
+    <ImageView
+        android:id="@+id/bg_main_two"
+        android:layout_width="1920px"
+        android:layout_height="1080px"
+        android:src="@drawable/bg_main_two"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.example.far_faraway.Object
         android:id="@+id/secondPassed_0"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginEnd="4dp"
         android:background="@drawable/pass_1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.405"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.045" />
+        app:layout_constraintBottom_toBottomOf="@+id/secondPassed_1"
+        app:layout_constraintEnd_toStartOf="@+id/secondPassed_1"
+        app:layout_constraintTop_toTopOf="@+id/secondPassed_1"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.example.far_faraway.Object
         android:id="@+id/secondPassed_1"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -33,31 +43,30 @@
         android:background="@drawable/pass_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.045" />
+        app:layout_constraintVertical_bias="0.120" />
 
     <com.example.far_faraway.Object
         android:id="@+id/secondPassed_2"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="4dp"
         android:background="@drawable/pass_1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.548"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.045" />
+        app:layout_constraintBottom_toBottomOf="@+id/secondPassed_1"
+        app:layout_constraintStart_toEndOf="@+id/secondPassed_1"
+        app:layout_constraintTop_toTopOf="@+id/secondPassed_1"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.example.far_faraway.Puzzle
         android:id="@+id/secondMushrooms"
-        android:layout_width="128dp"
-        android:layout_height="167dp"
+        android:layout_width="163dp"
+        android:layout_height="228dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -65,24 +74,24 @@
         android:background="@drawable/pnc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.026"
+        app:layout_constraintHorizontal_bias="0.023"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.565" />
+        app:layout_constraintVertical_bias="0.407" />
 
     <com.example.far_faraway.Puzzle
         android:id="@+id/secondSibas"
-        android:layout_width="123dp"
-        android:layout_height="139dp"
+        android:layout_width="147dp"
+        android:layout_height="152dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/pnc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.246"
+        app:layout_constraintHorizontal_bias="0.272"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.242" />
+        app:layout_constraintVertical_bias="0.309" />
 
     <com.example.far_faraway.Puzzle
         android:id="@+id/secondWires"
@@ -93,43 +102,43 @@
         android:background="@drawable/pnc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.746"
+        app:layout_constraintHorizontal_bias="0.686"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.127" />
+        app:layout_constraintVertical_bias="0.247" />
 
     <com.example.far_faraway.Puzzle
         android:id="@+id/secondNotes"
-        android:layout_width="107dp"
-        android:layout_height="148dp"
+        android:layout_width="238dp"
+        android:layout_height="307dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/pnc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintHorizontal_bias="0.982"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.414" />
+        app:layout_constraintVertical_bias="0.33" />
 
     <com.example.far_faraway.Puzzle
         android:id="@+id/secondDram"
-        android:layout_width="410dp"
-        android:layout_height="121dp"
+        android:layout_width="539dp"
+        android:layout_height="137dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/pnc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <com.example.far_faraway.Holder
         android:id="@+id/secondFlower"
-        android:layout_width="58dp"
-        android:layout_height="56dp"
+        android:layout_width="215px"
+        android:layout_height="330px"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -137,18 +146,18 @@
         android:background="@drawable/flower_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintHorizontal_bias="0.175"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.081" />
+        app:layout_constraintVertical_bias="0.549" />
 
     <com.example.far_faraway.Object
         android:id="@+id/secondDoor"
-        android:layout_width="144dp"
-        android:layout_height="204dp"
+        android:layout_width="304px"
+        android:layout_height="405px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintHorizontal_bias="0.480"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.318" />

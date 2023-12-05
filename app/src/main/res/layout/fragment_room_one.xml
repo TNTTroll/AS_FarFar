@@ -8,9 +8,9 @@
     tools:context=".RoomOne">
 
     <ImageView
-        android:id="@+id/bg_main"
+        android:id="@+id/bg_main_one"
         android:layout_width="1920px"
-        android:layout_height="1120px"
+        android:layout_height="1080px"
         android:src="@drawable/bg_main_one"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,14 +91,14 @@
 
     <com.example.far_faraway.Holder
         android:id="@+id/firstFlower"
-        android:layout_width="115px"
-        android:layout_height="260px"
-        android:layout_marginStart="184dp"
+        android:layout_width="215px"
+        android:layout_height="330px"
+        android:layout_marginStart="160dp"
         android:background="@drawable/flower_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.636" />
+        app:layout_constraintVertical_bias="0.56" />
 
     <com.example.far_faraway.Object
         android:id="@+id/watering"
@@ -113,11 +113,11 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/firstDoor"
-        android:layout_width="144dp"
-        android:layout_height="204dp"
+        android:layout_width="304px"
+        android:layout_height="405px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.318" />

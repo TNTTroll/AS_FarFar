@@ -1,18 +1,10 @@
 package com.example.far_faraway;
 
-import static com.example.far_faraway.MainActivity.player;
-import static com.example.far_faraway.MainActivity.setLevel;
-import static com.example.far_faraway.Scene.getResId;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 
-import com.example.far_faraway.Object;
 import androidx.fragment.app.DialogFragment;
 
 public class Levels extends DialogFragment implements View.OnClickListener {

@@ -88,11 +88,11 @@
         android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
-        android:layout_toStartOf="@+id/imageView"
+        android:layout_toStartOf="@+id/sceneIndicator"
         tools:layout="@layout/fragment_room_one" />
 
-    <ImageView
-        android:id="@+id/imageView"
+    <com.example.far_faraway.Object
+        android:id="@+id/sceneIndicator"
         android:layout_width="60dp"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
@@ -101,6 +101,6 @@
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
         android:layout_toStartOf="@+id/inventory"
-        app:srcCompat="@drawable/bg_indicator_1" />
+        android:background="@drawable/bg_indicator_1" />
 
 </RelativeLayout>
