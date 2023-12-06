@@ -14,12 +14,25 @@
 
     <com.example.far_faraway.Object
         android:id="@+id/menuBack"
-        android:layout_width="84dp"
-        android:layout_height="86dp"
+        android:layout_width="132dp"
+        android:layout_height="74dp"
         android:background="@drawable/yes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/menuBG"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.738" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="267dp"
+        android:layout_height="53dp"
+        android:text="Выйти в главное меню?"
+        android:gravity="center"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/menuBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/menuBG" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

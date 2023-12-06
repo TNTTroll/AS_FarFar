@@ -25,7 +25,7 @@ public class Progress extends AppCompatActivity {
         });
 
         TextView text = (TextView) findViewById(R.id.progressText);
-        text.setText("Hello, " + player.getName());
+        text.setText("Здравствуй, " + player.getName() + ". Ваши достижения:");
     }
 
 }

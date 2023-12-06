@@ -10,41 +10,44 @@
         android:id="@+id/lvlBG"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/sibas_color_0"
+        android:background="@drawable/bg_all"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.example.far_faraway.Object
         android:id="@+id/lvl_1"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="264dp"
-        android:layout_marginBottom="228dp"
-        android:background="@drawable/yes"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:background="@drawable/level_2"
+        app:layout_constraintEnd_toStartOf="@+id/lvl_2"
+        app:layout_constraintHorizontal_bias="0.655"
+        app:layout_constraintStart_toStartOf="@+id/lvlBG"
+        app:layout_constraintTop_toTopOf="@+id/lvl_2" />
 
     <com.example.far_faraway.Object
         android:id="@+id/lvl_2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="532dp"
-        android:layout_marginBottom="232dp"
-        android:background="@drawable/yes"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:background="@drawable/level_2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lvlText"
+        app:layout_constraintVertical_bias="0.343" />
 
     <com.example.far_faraway.Object
         android:id="@+id/lvl_3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="796dp"
-        android:layout_marginBottom="232dp"
-        android:background="@drawable/yes"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:background="@drawable/level_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.336"
+        app:layout_constraintStart_toEndOf="@+id/lvl_2"
+        app:layout_constraintTop_toTopOf="@+id/lvl_2" />
 
     <ImageButton
         android:id="@+id/lvlNo"
@@ -52,7 +55,7 @@
         android:layout_height="100dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="30dp"
-        android:background="@drawable/no"
+        android:background="@drawable/back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -62,9 +65,9 @@
         android:layout_height="61dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
+        android:text="Выберите уровень"
+        android:textSize="80px"
         android:textStyle="bold"
-        android:textSize="50px"
-        android:text="Where to go, pal?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

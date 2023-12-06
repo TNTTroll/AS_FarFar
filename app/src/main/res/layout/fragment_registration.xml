@@ -10,7 +10,7 @@
         android:id="@+id/imageButton"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/sibas_color_0" />
+        android:background="@drawable/bg_all" />
 
     <Button
         android:id="@+id/regDone"
@@ -31,7 +31,7 @@
         android:layout_marginStart="56dp"
         android:layout_marginTop="63dp"
         android:ems="10"
-        android:hint="Name"
+        android:hint="Имя"
         android:inputType="textPersonName" />
 
     <com.example.far_faraway.Object
@@ -53,7 +53,7 @@
         android:layout_marginStart="56dp"
         android:layout_marginTop="225dp"
         android:ems="10"
-        android:hint="Number"
+        android:hint="Ответ"
         android:inputType="number" />
 
 </RelativeLayout>

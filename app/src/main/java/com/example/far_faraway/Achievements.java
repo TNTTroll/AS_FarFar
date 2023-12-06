@@ -57,10 +57,10 @@ public class Achievements extends Fragment implements View.OnClickListener {
         for (int index = 1; index <= _PUZZLES.achievements.length; index++) {
             Object obj = (Object) view.findViewById(getResId("ach_" + index, R.id.class));
 
-            obj.setParam(_PUZZLES.achievements[index - 1], "ach_" + index);
+            obj.setParam(_PUZZLES.achievements[index - 1], "ach_" + index + "_2");
 
             if (!MainActivity.getAchievement(index - 1))
-                obj.setIcon("pnc");
+                obj.setIcon("ach_" + index + "_1");
 
         }
 

@@ -127,28 +127,28 @@ public class MainActivity extends AppCompatActivity {
                 openRegistration(findViewById(R.id.menuMain));
             } catch (IOException ignored) {}
         } else
-            Toast.makeText(getApplicationContext(), "Welcome back, " + player.getName(), Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "С возвращением, " + player.getName(), Toast.LENGTH_LONG).show();
 
         try {
             getItems();
         } catch (IOException ignored) {}
 
-        Button play = (Button) findViewById(R.id.menuBtnPlay);
+        ImageButton play = (ImageButton) findViewById(R.id.menuBtnPlay);
         play.setOnClickListener(view -> {
             Intent scene = new Intent(MainActivity.this, Scene.class);
             startActivity(scene);
         });
 
-        Button progress = (Button) findViewById(R.id.menuBtnProgress);
+        ImageButton progress = (ImageButton) findViewById(R.id.menuBtnProgress);
         progress.setOnClickListener(view -> {
             Intent scene = new Intent(MainActivity.this, Progress.class);
             startActivity(scene);
         });
 
-        Button level = (Button) findViewById(R.id.menuBtnLevel);
+        ImageButton level = (ImageButton) findViewById(R.id.menuBtnLevel);
         level.setOnClickListener(view -> openLevels(findViewById(R.id.menuMain)));
 
-        Button tutorial = (Button) findViewById(R.id.menuBtnTutorial);
+        ImageButton tutorial = (ImageButton) findViewById(R.id.menuBtnTutorial);
         tutorial.setOnClickListener(view -> {
             dialog_tutorial.setContentView(R.layout.fragment_tutorial);
 
@@ -159,9 +159,9 @@ public class MainActivity extends AppCompatActivity {
             dialog_tutorial.show();
         });
 
-        Button sure = (Button) findViewById(R.id.menuBtnAccept);
+        ImageButton sure = (ImageButton) findViewById(R.id.menuBtnAccept);
 
-        Button clear = (Button) findViewById(R.id.menuBtnClear);
+        ImageButton clear = (ImageButton) findViewById(R.id.menuBtnClear);
         clear.setVisibility(View.GONE);
         clear.setOnClickListener(view -> {
             restartAll();
@@ -268,7 +268,7 @@ public class MainActivity extends AppCompatActivity {
             });
 
             if (index > player.getLevel()) {
-                lvl.setIcon("no");
+                lvl.setIcon("level_1");
                 lvl.setEnabled(false);
             }
         }
@@ -298,14 +298,14 @@ public class MainActivity extends AppCompatActivity {
             EditText getCaptcha = dialog_player.findViewById(R.id.regCaptchaAnswer);
 
             if (getCaptcha.getText().toString().equals(""))
-                Toast.makeText(getApplicationContext(), "Captcha is empty", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Капча не заполнено", Toast.LENGTH_SHORT).show();
 
             else if (playerInfo.equals(""))
-                Toast.makeText(getApplicationContext(), "Name is empty", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Имя не заполнено", Toast.LENGTH_SHORT).show();
 
             else {
                 if (Integer.parseInt( getCaptcha.getText().toString() ) != _PUZZLES.registrationAnswers[capAnswer-1]) {
-                    Toast.makeText(getApplicationContext(), "Captcha is wrong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Капча неверная", Toast.LENGTH_SHORT).show();
                     getCaptcha.setText("");
 
                 } else {
@@ -460,7 +460,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 assert outputStream != null;
 
-                Toast.makeText(thisContext.getApplicationContext(), "Achievement get: " + _PUZZLES.achievementsExplain[a], Toast.LENGTH_LONG).show();
+                Toast.makeText(thisContext.getApplicationContext(), "Достижение: " + _PUZZLES.achievementsExplain[a], Toast.LENGTH_LONG).show();
 
                 achieve += '\n';
                 outputStream.write(achieve.getBytes());
@@ -512,7 +512,7 @@ public class MainActivity extends AppCompatActivity {
 
         } catch (IOException ignored) {}
 
-        Toast.makeText(getApplicationContext(), "Your progress has been deleted", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Ваш прогресс удален", Toast.LENGTH_LONG).show();
     }
 
     public static void playAudio(String audio) {

@@ -31,7 +31,7 @@
             android:layout_weight=".2"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            android:src="@drawable/black"
+            android:src="@drawable/inv_slot"
             app:backgroundTint="#000000" />
 
         <ImageButton
@@ -41,7 +41,7 @@
             android:layout_weight=".2"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            android:src="@drawable/black"
+            android:src="@drawable/inv_slot"
             app:backgroundTint="#000000" />
 
         <ImageButton
@@ -51,7 +51,7 @@
             android:layout_weight=".2"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            android:src="@drawable/black"
+            android:src="@drawable/inv_slot"
             app:backgroundTint="#000000" />
 
         <ImageButton
@@ -61,7 +61,7 @@
             android:layout_weight=".2"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            android:src="@drawable/black"
+            android:src="@drawable/inv_slot"
             app:backgroundTint="#000000" />
 
         <com.example.far_faraway.Object
@@ -71,8 +71,7 @@
             android:layout_weight=".2"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            android:background="@drawable/yes"
-            app:backgroundTint="#000000" />
+            android:background="@drawable/inv_menu" />
 
     </LinearLayout>
 

@@ -48,7 +48,7 @@ public class Acception extends DialogFragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.acceptBtnYes) {
-            Toast.makeText(getActivity(), "Level " + player.getLevel() + ": COMPLETED!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), "Уровень " + player.getLevel() + ": ЗАВЕРШЕН!", Toast.LENGTH_LONG).show();
 
             switch (player.getLevel()) {
                 case 1:

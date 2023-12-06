@@ -33,7 +33,7 @@ public class Ending extends AppCompatActivity {
         back.setVisibility(View.GONE);
 
         text = (TextView) findViewById(R.id.endText);
-        text.setText("Thank you for playing, " + player.getName());
+        text.setText("Спасибо за игру, " + player.getName());
         text.setVisibility(View.GONE);
 
         bg = (Object) findViewById(R.id.endBG);

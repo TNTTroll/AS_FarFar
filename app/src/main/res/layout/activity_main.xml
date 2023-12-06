@@ -11,7 +11,7 @@
         android:id="@+id/mainBG"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#244573"
+        android:background="@drawable/bg_menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -19,98 +19,97 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
+    <ImageButton
         android:id="@+id/menuBtnPlay"
-        android:layout_width="132dp"
-        android:layout_height="115dp"
+        android:layout_width="421dp"
+        android:layout_height="95dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:text="Play"
+        android:background="@drawable/btn_play"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.602" />
 
-    <Button
+    <ImageButton
         android:id="@+id/menuBtnProgress"
-        android:layout_width="161dp"
-        android:layout_height="80dp"
+        android:layout_width="651px"
+        android:layout_height="140px"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:text="Achievements"
+        android:background="@drawable/btn_achive"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintEnd_toStartOf="@+id/menuBtnLevel"
+        app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.951" />
+        app:layout_constraintTop_toBottomOf="@+id/menuBtnPlay"
+        app:layout_constraintVertical_bias="0.214" />
 
-    <Button
+    <ImageButton
         android:id="@+id/menuBtnLevel"
-        android:layout_width="161dp"
-        android:layout_height="80dp"
+        android:layout_width="651px"
+        android:layout_height="140px"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:text="Levels"
+        android:background="@drawable/btn_level"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintEnd_toEndOf="@+id/mainBG"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.034" />
+        app:layout_constraintTop_toBottomOf="@+id/menuBtnPlay"
+        app:layout_constraintVertical_bias="0.214" />
 
-    <Button
+    <ImageButton
         android:id="@+id/menuBtnTutorial"
-        android:layout_width="161dp"
-        android:layout_height="80dp"
+        android:layout_width="651px"
+        android:layout_height="140px"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:text="Tutorial"
+        android:background="@drawable/btn_tutor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.028"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.034" />
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toEndOf="@+id/menuBtnLevel"
+        app:layout_constraintTop_toBottomOf="@+id/menuBtnPlay"
+        app:layout_constraintVertical_bias="0.214" />
 
-    <Button
+    <ImageButton
         android:id="@+id/menuBtnAccept"
-        android:layout_width="103dp"
-        android:layout_height="73dp"
+        android:layout_width="279dp"
+        android:layout_height="54dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:text="Clear"
+        android:background="@drawable/btn_clear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.994" />
+        app:layout_constraintTop_toBottomOf="@+id/menuBtnProgress"
+        app:layout_constraintVertical_bias="0.272" />
 
-    <Button
+    <ImageButton
         android:id="@+id/menuBtnClear"
-        android:layout_width="103dp"
-        android:layout_height="73dp"
+        android:layout_width="279dp"
+        android:layout_height="54dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:text="Sure?"
+        android:background="@drawable/btn_sure"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.994" />
+        app:layout_constraintTop_toBottomOf="@+id/menuBtnProgress"
+        app:layout_constraintVertical_bias="0.272" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
