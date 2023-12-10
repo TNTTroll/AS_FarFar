@@ -74,7 +74,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/firstLightsButtons"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.225" />
+        app:layout_constraintVertical_bias="0.122" />
 
     <com.example.far_faraway.Object
         android:id="@+id/firstLights_2"
@@ -95,13 +95,13 @@
         android:layout_height="133dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="3dp"
+        android:layout_marginStart="4dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/firstLightsButtons"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.775" />
+        app:layout_constraintVertical_bias="0.869" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

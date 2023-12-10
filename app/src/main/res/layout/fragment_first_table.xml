@@ -58,7 +58,7 @@
         android:layout_height="618px"
         android:layout_alignStart="@+id/firstTableHolderBack"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="42dp"
+        android:layout_marginStart="33dp"
         android:layout_marginTop="65dp"
         android:background="@drawable/table_flask_1" />
 

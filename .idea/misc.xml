@@ -7,7 +7,7 @@
         <entry key="..\:/Users/Zver/AndroidStudioProjects/FarFarAway/app/src/main/res/drawable/ic_launcher_background.xml" value="0.368" />
         <entry key="..\:/Users/Zver/AndroidStudioProjects/FarFarAway/app/src/main/res/layout/activity_ending.xml" value="0.33" />
         <entry key="..\:/Users/Zver/AndroidStudioProjects/FarFarAway/app/src/main/res/layout/activity_main.xml" value="0.18" />
-        <entry key="..\:/Users/Zver/AndroidStudioProjects/FarFarAway/app/src/main/res/layout/activity_progress.xml" value="0.33" />
+        <entry key="..\:/Users/Zver/AndroidStudioProjects/FarFarAway/app/src/main/res/layout/activity_progress.xml" value="0.25" />
         <entry key="..\:/Users/Zver/AndroidStudioProjects/FarFarAway/app/src/main/res/layout/activity_room_one.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Zver/AndroidStudioProjects/FarFarAway/app/src/main/res/layout/activity_scene.xml" value="0.2614413466596528" />
         <entry key="..\:/Users/Zver/AndroidStudioProjects/FarFarAway/app/src/main/res/layout/content_progress.xml" value="0.33" />
@@ -15,10 +15,10 @@
         <entry key="..\:/Users/Zver/AndroidStudioProjects/FarFarAway/app/src/main/res/layout/fragment_achievements.xml" value="0.33" />
         <entry key="..\:/Users/Zver/AndroidStudioProjects/FarFarAway/app/src/main/res/layout/fragment_empty_one.xml" value="0.33" />
         <entry key="..\:/Users/Zver/AndroidStudioProjects/FarFarAway/app/src/main/res/layout/fragment_first_closet.xml" value="0.33" />
-        <entry key="..\:/Users/Zver/AndroidStudioProjects/FarFarAway/app/src/main/res/layout/fragment_first_lights.xml" value="0.33" />
+        <entry key="..\:/Users/Zver/AndroidStudioProjects/FarFarAway/app/src/main/res/layout/fragment_first_lights.xml" value="0.5" />
         <entry key="..\:/Users/Zver/AndroidStudioProjects/FarFarAway/app/src/main/res/layout/fragment_first_pipes.xml" value="0.33" />
         <entry key="..\:/Users/Zver/AndroidStudioProjects/FarFarAway/app/src/main/res/layout/fragment_first_signs.xml" value="0.33" />
-        <entry key="..\:/Users/Zver/AndroidStudioProjects/FarFarAway/app/src/main/res/layout/fragment_first_table.xml" value="0.1" />
+        <entry key="..\:/Users/Zver/AndroidStudioProjects/FarFarAway/app/src/main/res/layout/fragment_first_table.xml" value="0.5" />
         <entry key="..\:/Users/Zver/AndroidStudioProjects/FarFarAway/app/src/main/res/layout/fragment_levels.xml" value="0.25" />
         <entry key="..\:/Users/Zver/AndroidStudioProjects/FarFarAway/app/src/main/res/layout/fragment_menu.xml" value="0.5" />
         <entry key="..\:/Users/Zver/AndroidStudioProjects/FarFarAway/app/src/main/res/layout/fragment_registration.xml" value="0.33" />
